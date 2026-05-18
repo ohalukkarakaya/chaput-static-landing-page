@@ -1,9 +1,9 @@
 {
-  "name": "Mobile App Name",
-  "short_name": "Mobile App Name",
-  "description": "A super tagline for the mobile app",
+  "name": "Chaput",
+  "short_name": "Chaput",
+  "description": "Profil ağacı üzerinden chaput paylaşmaya ve sohbet başlatmaya odaklanan sosyal platform.",
   "dir": "auto",
-  "lang": "en-US",
+  "lang": "tr-TR",
   "display": "standalone",
   "orientation": "portrait",
   "start_url": "/",
