@@ -78,3 +78,7 @@ body.page--privacy.darkmode--activated .footer__container {
 body.page--privacy.darkmode--activated .footer a {
   color: #a9b0ff;
 }
+
+.footer__links {
+  flex-wrap: wrap;
+}
