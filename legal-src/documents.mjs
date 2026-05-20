@@ -1,20 +1,24 @@
-const company = "[ŞİRKET UNVANI]";
-const address = "[ADRES]";
-const email = "[E-POSTA]";
-const mersis = "[MERSİS]";
-const taxNo = "[VERGİ NO]";
-const controller = "[VERİ SORUMLUSU]";
+const company = "GÖKTİGİN BİLİŞİM TEKNOLOJİ LİMİTED ŞİRKETİ";
+const address =
+  "Pınarbaşı Mah. Hürriyet Cad. Akdeniz Üniversitesi Uluğbey Ar-Ge 2 No: 3A İç Kapı No: B103 Konyaaltı / Antalya";
+const email = "hello@goktigin.com";
+const website = "https://goktigin.com";
+const mersis = "0406072354000001";
+const taxNo = "4060723540";
+const contactPerson = "Özgür Haluk Karakaya";
+const controllerRole = "veri sorumlusu";
+const controllerRoleEn = "data controller";
 
 export const site = {
   brand: "Chaput",
   domain: "https://chaput.app",
   trDates: {
-    effective: "[YÜRÜRLÜK TARİHİ]",
-    updated: "[SON GÜNCELLEME]",
+    effective: "20.05.2026",
+    updated: "20.05.2026",
   },
   enDates: {
-    effective: "[EFFECTIVE DATE]",
-    updated: "[LAST UPDATED]",
+    effective: "20 May 2026",
+    updated: "20 May 2026",
   },
 };
 
@@ -29,7 +33,7 @@ export const docs = [
         "Bu Kullanıcı Sözleşmesi, Chaput mobil uygulaması ve bağlantılı hizmetlerin kullanım şartlarını düzenler.",
       blocks: [
         `<h2>1. Taraflar ve Kapsam</h2>
-        <p>Bu Kullanıcı Sözleşmesi, ${company}, ${address}, MERSİS No: ${mersis}, Vergi No: ${taxNo} (“Chaput”, “Şirket”, “biz”) ile Chaput mobil uygulamasını, ilgili internet sayfalarını ve bağlantılı hizmetleri kullanan gerçek kişi kullanıcı (“Kullanıcı”, “siz”) arasında kurulmaktadır.</p>
+        <p>Bu Kullanıcı Sözleşmesi, ${company}, ${address}, MERSİS No: ${mersis}, Vergi No: ${taxNo}, web sitesi: ${website} (“Chaput”, “Şirket”, “biz”) ile Chaput mobil uygulamasını, ilgili internet sayfalarını ve bağlantılı hizmetleri kullanan gerçek kişi kullanıcı (“Kullanıcı”, “siz”) arasında kurulmaktadır.</p>
         <p>Chaput; kullanıcıların profil ağacı üzerinde chaput bırakmasına, cevap vermesine, halka açık veya sınırlı görünürlüğe sahip akışlar oluşturmasına, kullanıcıları takip etmesine, engellemesine, kısıtlamasına, içerik raporlamasına ve belirli dijital özellikler için abonelik veya kredi kullanmasına imkân tanıyan sosyal bir iletişim hizmetidir.</p>`,
 
         `<h2>2. Uygunluk ve Hesap</h2>
@@ -144,7 +148,7 @@ export const docs = [
         "Bu Gizlilik Politikası, Chaput tarafından hangi verilerin işlendiğini, neden işlendiğini, kimlerle paylaşılabildiğini ve ne kadar süre saklanabildiğini açıklar.",
       blocks: [
         `<h2>1. Veri Sorumlusu ve Politikanın Kapsamı</h2>
-        <p>Bu politika, Chaput mobil uygulaması, ${site.domain} alan adı altındaki sayfalar ve bunlarla bağlantılı destek, bildirim, moderasyon ve satın alma süreçleri için ${controller} sıfatıyla hareket eden ${company} tarafından uygulanır.</p>
+        <p>Bu politika, Chaput mobil uygulaması, ${site.domain} alan adı altındaki sayfalar ve bunlarla bağlantılı destek, bildirim, moderasyon ve satın alma süreçleri için ${controllerRole} sıfatıyla hareket eden ${company} tarafından uygulanır. Bu kapsamda yetkili irtibat kişisi ${contactPerson}'dır.</p>
         <p>Bu politika; uygulama işlevleri, kullanıcı etkileşimleri, abonelikler, krediler, reklam ödülleri, raporlama ve hesap yönetimi kapsamında işlenen kişisel verileri kapsar. Uygulama mağazaları, ödeme arayüzleri veya üçüncü taraf sağlayıcılar kendi ayrı gizlilik metinlerini de uygulayabilir.</p>`,
 
         `<h2>2. İşlediğimiz Veri Kategorileri</h2>
@@ -208,7 +212,7 @@ export const docs = [
         "This Privacy Policy explains what data Chaput processes, why it is processed, with whom it may be shared, and how long it may be retained.",
       blocks: [
         `<h2>1. Data Controller and Scope</h2>
-        <p>This policy applies to the Chaput mobile application, pages under ${site.domain}, and related support, notification, moderation, and purchase processes operated by ${company} acting as ${controller}.</p>
+        <p>This policy applies to the Chaput mobile application, pages under ${site.domain}, and related support, notification, moderation, and purchase processes operated by ${company} acting as the ${controllerRoleEn}. The authorized contact person for these processes is ${contactPerson}.</p>
         <p>This policy covers personal data processed for app functionality, user interactions, subscriptions, credits, ad rewards, reporting, and account management. App stores, payment interfaces, and third-party providers may also apply their own privacy notices.</p>`,
 
         `<h2>2. Categories of Data We Process</h2>
@@ -275,7 +279,7 @@ export const docs = [
         "Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 10. maddesi uyarınca hazırlanmıştır.",
       blocks: [
         `<h2>1. Veri Sorumlusunun Kimliği</h2>
-        <p>Bu aydınlatma metni, ${controller} sıfatıyla hareket eden ${company}, ${address}, MERSİS No: ${mersis}, Vergi No: ${taxNo} tarafından hazırlanmıştır.</p>`,
+        <p>Bu aydınlatma metni, ${controllerRole} sıfatıyla hareket eden ${company}, ${address}, MERSİS No: ${mersis}, Vergi No: ${taxNo}, web sitesi: ${website} tarafından hazırlanmıştır. Yetkili irtibat kişisi ${contactPerson}'dır.</p>`,
 
         `<h2>2. İşlenen Kişisel Veriler</h2>
         <p>Chaput hizmeti kapsamında aşağıdaki veri kategorileri işlenebilmektedir: kimlik ve hesap verileri, iletişim verileri, profil verileri, kullanıcı içerikleri, sosyal grafik verileri, blokaj ve kısıtlama kayıtları, satın alma ve abonelik verileri, push bildirim verileri, teknik oturum ve güvenlik verileri, raporlama ve moderasyon verileri, reklam ödülü ve kullanım verileri.</p>`,
@@ -324,7 +328,7 @@ export const docs = [
         "This privacy notice has been prepared pursuant to Article 10 of Türkiye's Personal Data Protection Law No. 6698.",
       blocks: [
         `<h2>1. Identity of the Data Controller</h2>
-        <p>This privacy notice has been prepared by ${company}, ${address}, MERSIS No. ${mersis}, Tax No. ${taxNo}, acting as ${controller}.</p>`,
+        <p>This privacy notice has been prepared by ${company}, ${address}, MERSIS No. ${mersis}, Tax No. ${taxNo}, website: ${website}, acting as the ${controllerRoleEn}. The authorized contact person is ${contactPerson}.</p>`,
 
         `<h2>2. Personal Data Processed</h2>
         <p>Within the scope of the Chaput service, the following categories of data may be processed: identity and account data, contact data, profile data, user content, social graph data, block and restriction records, purchase and subscription data, push notification data, technical session and security data, reporting and moderation data, and ad reward or usage data.</p>`,
