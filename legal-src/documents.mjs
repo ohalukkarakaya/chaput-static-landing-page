@@ -54,6 +54,7 @@ export const docs = [
         <ul>
           <li>Hukuka aykırı, tehditkâr, taciz edici, nefret içeren, ayrımcı, yanıltıcı veya dolandırıcılık amaçlı içerik paylaşmak.</li>
           <li>Çocukların cinsel istismarı, cinsel sömürü, çıplaklık istismarı, insan ticareti, intihara yönlendirme, şiddet çağrısı veya terör propagandası içeren içerik üretmek ya da yaymak.</li>
+          <li>Gazi Mustafa Kemal Atatürk'e veya hatırasına yönelik, 5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun kapsamına girebilecek nitelikte ya da platform politikamız bakımından küçümseyici, hakaret içeren, sövme niteliğinde veya bu tür içerikleri ima eden kullanıcı adı, profil adı, biyografi, görsel, profil fotoğrafı, chaput, mesaj, fısıltı veya benzeri içerikler üretmek, paylaşmak veya yaymak.</li>
           <li>İzinsiz reklam, spam, otomatik toplu hareket, yapay etkileşim, scraping, reverse engineering, güvenlik testleri veya hizmeti aşırı yükleme girişimlerinde bulunmak.</li>
           <li>Başka kullanıcıların gizliliğini ihlal etmek, kişisel verilerini izinsiz paylaşmak, doxxing yapmak veya uygulamadaki görünürlük sınırlarını teknik yollarla aşmaya çalışmak.</li>
           <li>Kredi, abonelik, reklam ödülü, raporlama, engelleme veya moderasyon sistemlerini kötüye kullanmak.</li>
@@ -66,6 +67,7 @@ export const docs = [
 
         `<h2>7. Moderasyon ve Yaptırım</h2>
         <p>Topluluk Kuralları, İçerik Moderasyon ve Şikâyet Politikası ile diğer ürün kurallarımızı ihlal eden içerik ve hesaplara karşı uyarı, görünürlük azaltma, içeriği gizleme, arşivleme, kaldırma, satın alma haklarını sınırlama, hesabı dondurma, erişimi sonlandırma, cihaz veya hesap eşleştirmelerini iptal etme ve gerekli hallerde kalıcı yasak uygulama hakkımız saklıdır.</p>
+        <p>Gazi Mustafa Kemal Atatürk'e veya hatırasına yönelik, 5816 sayılı Kanun kapsamına girebilecek nitelikte ya da platform politikamız bakımından küçümseyici, hakaret içeren, sövme niteliğinde veya bu tür içerikleri ima eden içeriklerin tespit edilmesi halinde ilgili içerik kaldırılır, hesap kalıcı olarak yasaklanır ve yetkili mercilere şikâyet ve/veya bildirimde bulunulur.</p>
         <p>Şikâyetlerin değerlendirilmesi, otomatik sinyaller ve insan incelemesi birlikte kullanılarak yapılabilir. Ağır ihlallerde ön bildirim yapılmaksızın işlem uygulanabilir.</p>`,
 
         `<h2>8. Hesabın Dondurulması, Silinmesi ve Erişimin Sonlandırılması</h2>
@@ -110,6 +112,7 @@ export const docs = [
         <ul>
           <li>Posting unlawful, threatening, abusive, hateful, discriminatory, deceptive, or fraudulent content.</li>
           <li>Creating or distributing content involving child sexual abuse, sexual exploitation, exploitative nudity, human trafficking, incitement to suicide, calls to violence, or terrorist propaganda.</li>
+          <li>Creating, sharing, or distributing usernames, profile names, biographies, images, profile photos, chaputs, messages, whispers, or similar content that may fall within the scope of Turkish Law No. 5816 on Crimes Against Ataturk, or that is otherwise demeaning, abusive, insulting, profane toward, or implying insult or denigration of Gazi Mustafa Kemal Ataturk or his memory under our platform rules.</li>
           <li>Engaging in unauthorized advertising, spam, automated bulk actions, artificial engagement, scraping, reverse engineering, security testing, or attempts to overload the service.</li>
           <li>Violating the privacy of others, disclosing personal data without permission, doxxing, or attempting to bypass visibility limits through technical means.</li>
           <li>Abusing credits, subscriptions, ad-reward systems, reporting tools, block features, or moderation mechanisms.</li>
@@ -122,6 +125,7 @@ export const docs = [
 
         `<h2>7. Moderation and Enforcement</h2>
         <p>We reserve the right to warn, reduce visibility, hide, archive, remove, limit purchasing privileges, freeze an account, terminate access, invalidate device or account mappings, and impose permanent bans for content or conduct that violates our Community Guidelines, Content Moderation and Reporting Policy, or other product rules.</p>
+        <p>If content is detected that may fall within the scope of Turkish Law No. 5816, or that is otherwise demeaning, abusive, insulting, profane toward, or implying insult or denigration of Gazi Mustafa Kemal Ataturk or his memory under our platform rules, the relevant content will be removed, the account will be permanently banned, and a complaint and/or report will be made to competent authorities.</p>
         <p>Complaints may be reviewed using both automated signals and human review. In serious cases, action may be taken without prior notice.</p>`,
 
         `<h2>8. Account Freeze, Deletion, and Termination</h2>
@@ -430,6 +434,7 @@ export const docs = [
           <li>Çocukların cinsel istismarı, cinsel sömürü, çıplaklık istismarı veya çocuk güvenliğini tehlikeye atan her türlü içerik.</li>
           <li>Şiddet çağrısı, terör propagandası, suç işlemeye teşvik, dolandırıcılık veya kimlik sahteciliği.</li>
           <li>Mahrem görüntülerin izinsiz paylaşımı, kişisel verilerin ifşası, doxxing, stalking veya fiziksel güvenliği riske atan davranışlar.</li>
+          <li>Gazi Mustafa Kemal Atatürk'e veya hatırasına yönelik, 5816 sayılı Atatürk Aleyhine İşlenen Suçlar Hakkında Kanun kapsamına girebilecek nitelikte ya da platform politikamız bakımından küçümseyici, hakaret içeren, sövme niteliğinde veya bu tür içerikleri ima eden; kullanıcı adı, profil adı, biyografi, resim, profil fotoğrafı, chaput, mesaj, fısıltı veya benzeri her türlü içerik.</li>
           <li>Spam, sahte etkileşim, otomasyon, manipülasyon veya reklam sistemlerinin suistimali.</li>
         </ul>`,
 
@@ -440,7 +445,8 @@ export const docs = [
         <p>Bir kullanıcı sizinle etkileşim kurmak istemiyorsa, engelleme, kısıtlama veya takibi sonlandırma kararına saygı göstermelisiniz. Başka bir kullanıcının sınırlarını aşmaya dönük hesap yenileme, alternatif hesap açma veya teknik dolaşma girişimleri ihlal sayılabilir.</p>`,
 
         `<h2>5. Uygulama</h2>
-        <p>İhlaller, görünürlük azaltma, içeriğin kaldırılması, erişim kısıtlaması, satın alma ayrıcalıklarının sınırlandırılması, hesabın dondurulması veya kalıcı yasak ile sonuçlanabilir. Ağır ihlaller yetkili mercilere bildirilebilir.</p>`,
+        <p>İhlaller, görünürlük azaltma, içeriğin kaldırılması, erişim kısıtlaması, satın alma ayrıcalıklarının sınırlandırılması, hesabın dondurulması veya kalıcı yasak ile sonuçlanabilir. Ağır ihlaller yetkili mercilere bildirilebilir.</p>
+        <p>Özellikle Gazi Mustafa Kemal Atatürk'e veya hatırasına yönelik yukarıdaki kapsamda içerik tespit edilmesi halinde ilgili hesap kalıcı olarak yasaklanır ve yetkili mercilere şikâyet ve/veya bildirimde bulunulur.</p>`,
       ],
     },
     en: {
@@ -459,6 +465,7 @@ export const docs = [
           <li>Child sexual abuse material, sexual exploitation, exploitative nudity, or any content that endangers children.</li>
           <li>Calls to violence, terrorist propaganda, incitement to crime, fraud, or identity deception.</li>
           <li>Non-consensual sharing of intimate imagery, disclosure of personal data, doxxing, stalking, or conduct that endangers physical safety.</li>
+          <li>Usernames, profile names, biographies, images, profile photos, chaputs, messages, whispers, or any similar content that may fall within the scope of Turkish Law No. 5816, or that is otherwise demeaning, abusive, insulting, profane toward, or implying insult or denigration of Gazi Mustafa Kemal Ataturk or his memory under our platform rules.</li>
           <li>Spam, fake engagement, automation, manipulation, or abuse of advertising systems.</li>
         </ul>`,
 
@@ -469,7 +476,8 @@ export const docs = [
         <p>If another user does not want to interact with you, you must respect their decision to block, restrict, or unfollow. Attempts to bypass another user's boundaries through account recycling, alternate accounts, or technical circumvention may be treated as violations.</p>`,
 
         `<h2>5. Enforcement</h2>
-        <p>Violations may result in reduced visibility, removal of content, restricted access, limits on purchase privileges, account freeze, or permanent banning. Serious violations may be reported to competent authorities.</p>`,
+        <p>Violations may result in reduced visibility, removal of content, restricted access, limits on purchase privileges, account freeze, or permanent banning. Serious violations may be reported to competent authorities.</p>
+        <p>In particular, if the above type of content regarding Gazi Mustafa Kemal Ataturk or his memory is detected, the relevant account will be permanently banned and a complaint and/or report will be made to competent authorities.</p>`,
       ],
     },
   },
@@ -500,7 +508,8 @@ export const docs = [
         <p>Whisper, hidden veya benzeri görünürlük seçenekleri, moderasyon denetimini ortadan kaldırmaz. Güvenlik, moderasyon, dolandırıcılık önleme, destek ve hukuki zorunluluklar bakımından yetkili erişim mümkündür.</p>`,
 
         `<h2>5. Tekrarlayan veya Ağır İhlaller</h2>
-        <p>Çocuk güvenliği ihlalleri, cinsel sömürü, şiddet tehdidi, örgütlü dolandırıcılık, yasa dışı içerik ve ciddi gizlilik ihlallerinde hesabınız ön bildirim olmaksızın kalıcı olarak kapatılabilir ve gerekli görüldüğünde ilgili otoriteler bilgilendirilebilir.</p>`,
+        <p>Çocuk güvenliği ihlalleri, cinsel sömürü, şiddet tehdidi, örgütlü dolandırıcılık, yasa dışı içerik ve ciddi gizlilik ihlallerinde hesabınız ön bildirim olmaksızın kalıcı olarak kapatılabilir ve gerekli görüldüğünde ilgili otoriteler bilgilendirilebilir.</p>
+        <p>Gazi Mustafa Kemal Atatürk'e veya hatırasına yönelik, 5816 sayılı Kanun kapsamına girebilecek nitelikte ya da platform politikamız bakımından küçümseyici, hakaret içeren, sövme niteliğinde veya bu tür içerikleri ima eden kullanıcı adı, profil alanı, görsel, chaput, mesaj, fısıltı veya benzeri içeriklerin tespit edilmesi halinde ilgili hesap kalıcı olarak yasaklanır ve yetkili mercilere şikâyet ve/veya bildirimde bulunulur.</p>`,
 
         `<h2>6. Başvuru ve İletişim</h2>
         <p>Moderasyon kararlarına ilişkin ek açıklama taleplerinizi ${email} üzerinden iletebilirsiniz. Her talebin kabul edileceği veya ayrıntılı delil paylaşılacağı garanti edilmez; güvenlik, üçüncü kişi hakları ve yürütülen soruşturmalar nedeniyle kapsam sınırlanabilir.</p>`,
@@ -531,7 +540,8 @@ export const docs = [
         <p>Whisper, hidden, or similar visibility options do not prevent moderation review. Authorized access may still occur for safety, moderation, fraud prevention, support, and legal compliance.</p>`,
 
         `<h2>5. Repeat or Severe Violations</h2>
-        <p>Child safety violations, sexual exploitation, threats of violence, organized fraud, illegal content, and serious privacy violations may result in permanent termination without prior notice, and relevant authorities may be informed where appropriate.</p>`,
+        <p>Child safety violations, sexual exploitation, threats of violence, organized fraud, illegal content, and serious privacy violations may result in permanent termination without prior notice, and relevant authorities may be informed where appropriate.</p>
+        <p>If usernames, profile fields, images, chaputs, messages, whispers, or similar content are detected that may fall within the scope of Turkish Law No. 5816, or that are otherwise demeaning, abusive, insulting, profane toward, or implying insult or denigration of Gazi Mustafa Kemal Ataturk or his memory under our platform rules, the relevant account will be permanently banned and a complaint and/or report will be made to competent authorities.</p>`,
 
         `<h2>6. Requests and Contact</h2>
         <p>You may send requests for additional information regarding moderation decisions to ${email}. We do not guarantee that every request will be granted or that detailed evidence will be disclosed; security, third-party rights, and ongoing investigations may limit the scope of any response.</p>`,
