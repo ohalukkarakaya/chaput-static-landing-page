@@ -37,7 +37,7 @@ export const docs = [
         <p>Chaput; kullanıcıların profil ağacı üzerinde chaput bırakmasına, cevap vermesine, halka açık veya sınırlı görünürlüğe sahip akışlar oluşturmasına, kullanıcıları takip etmesine, engellemesine, kısıtlamasına, içerik raporlamasına ve belirli dijital özellikler için abonelik veya kredi kullanmasına imkân tanıyan sosyal bir iletişim hizmetidir.</p>`,
 
         `<h2>2. Uygunluk ve Hesap</h2>
-        <p>Chaput'u kullanabilmeniz için en az 13 yaşında olmanız ve ikamet ettiğiniz yerde hizmeti kullanmak için gerekli asgari yaş şartını sağlamanız gerekir. Hizmeti kullanırken doğru, güncel ve size ait hesap bilgileri sağlamayı kabul edersiniz.</p>
+        <p>Chaput'u kullanabilmeniz için en az 15 yaşında olmanız ve ikamet ettiğiniz yerde hizmeti kullanmak için gerekli asgari yaş şartını sağlamanız gerekir. Hizmeti kullanırken doğru, güncel ve size ait hesap bilgileri sağlamayı kabul edersiniz.</p>
         <p>Hesap oluşturma ve giriş süreçleri, uygulamanın ilgili sürümünde e-posta doğrulaması, doğrulama kodu, uygulama içi cihaz tanımlayıcısı, oturum ve güvenlik kontrolleri ile yürütülebilir. Giriş bilgilerinizi ve cihaz erişiminizi korumaktan siz sorumlusunuz.</p>
         <p>Başka bir kişi adına yetkisiz hesap açamaz, başkasını taklit edemez, yanıltıcı profil oluşturamaz veya hesabınızı hukuka aykırı amaçlarla kullanamazsınız.</p>`,
 
@@ -61,9 +61,9 @@ export const docs = [
         </ul>`,
 
         `<h2>6. Abonelikler, Krediler ve Dijital Satın Almalar</h2>
-        <p>Chaput belirli dijital özellikleri abonelikler, tek kullanımlık veya çok kullanımlık krediler, reklam ödülleri veya benzeri dijital erişim modelleri üzerinden sunabilir. Mevcut kod tabanı, farklı türlerde chaput kredileri ve abonelik planları bulunduğunu göstermektedir; güncel ürün, fiyat, para birimi, yenileme dönemi ve hak kapsamı uygulamada veya ilgili mağaza ekranında gösterildiği şekliyle geçerlidir.</p>
+        <p>Chaput, belirli dijital özellikleri abonelikler, tek kullanımlık veya çok kullanımlık krediler, reklam ödülleri ya da benzeri dijital erişim modelleri üzerinden sunabilir. Uygulama kapsamında sunulan dijital ürünler, abonelik planları, kredi türleri ve bunlara bağlı haklar zaman zaman değiştirilebilir. Güncel ürün, fiyat, para birimi, yenileme dönemi ve hak kapsamı; uygulama içinde, ilgili uygulama mağazasında veya satın alma ekranında gösterildiği şekliyle geçerlidir.</p>
         <p>iOS tarafında Apple, Android tarafında Google Play faturalandırması kullanılabilir. RevenueCat benzeri üçüncü taraf abonelik yönetim altyapıları, satın alma doğrulama ve hak senkronizasyon süreçlerinde hizmet sağlayıcı olarak kullanılabilir. Uygulama içinde sunulan dijital içerik, özellik veya avantajlar için aksi zorunlu hukuk kuralları uygulanmadıkça mağaza kuralları ve bu sözleşme birlikte geçerlidir.</p>
-        <p>Tüketilen krediler, kullanılmış avantajlar, reklam karşılığı kazanılmış haklar ve kötüye kullanım şüphesiyle askıya alınan işlemler, yürürlükteki hukuk saklı kalmak kaydıyla iade veya geri yükleme bakımından ek incelemeye tabi olabilir.</p>`,
+        <p>Tüketilen krediler, kullanılmış avantajlar, reklam karşılığı kazanılmış haklar ve kötüye kullanım şüphesiyle askıya alınan işlemler; yürürlükteki hukuk saklı kalmak kaydıyla iade veya geri yükleme bakımından ek incelemeye tabi olabilir.</p>`,
 
         `<h2>7. Moderasyon ve Yaptırım</h2>
         <p>Topluluk Kuralları, İçerik Moderasyon ve Şikâyet Politikası ile diğer ürün kurallarımızı ihlal eden içerik ve hesaplara karşı uyarı, görünürlük azaltma, içeriği gizleme, arşivleme, kaldırma, satın alma haklarını sınırlama, hesabı dondurma, erişimi sonlandırma, cihaz veya hesap eşleştirmelerini iptal etme ve gerekli hallerde kalıcı yasak uygulama hakkımız saklıdır.</p>
@@ -71,7 +71,7 @@ export const docs = [
         <p>Şikâyetlerin değerlendirilmesi, otomatik sinyaller ve insan incelemesi birlikte kullanılarak yapılabilir. Ağır ihlallerde ön bildirim yapılmaksızın işlem uygulanabilir.</p>`,
 
         `<h2>8. Hesabın Dondurulması, Silinmesi ve Erişimin Sonlandırılması</h2>
-        <p>Kod incelemesi, uygulamada hesabın dondurulması, dondurmanın kaldırılması ve kalıcı silme akışlarının bulunduğunu göstermektedir. Hesabın dondurulması oturumların sonlandırılması veya erişimin askıya alınması sonucunu doğurabilir; bu işlem hesap silme ile aynı değildir.</p>
+        <p>Chaput, belirli durumlarda kullanıcı hesaplarının geçici olarak dondurulmasına, erişimin askıya alınmasına veya hesabın kalıcı olarak silinmesine izin verebilir. Hesabın dondurulması; oturumların sonlandırılması, hesabın geçici olarak erişime kapatılması veya bazı özelliklerin sınırlandırılması sonucunu doğurabilir. Hesabın dondurulması, kalıcı hesap silme işlemiyle aynı hukuki ve teknik sonucu doğurmaz.</p>
         <p>Hesabınızı silmeniz halinde, hizmeti sağlamak için artık gerekli olmayan veriler silinebilir, yok edilebilir veya anonim hale getirilebilir. Bununla birlikte hukuki yükümlülükler, uyuşmazlıklar, güvenlik incelemeleri, dolandırıcılık önleme, satın alma iadesi veya hak geri yükleme kayıtları için bazı veriler daha uzun süre tutulabilir.</p>`,
 
         `<h2>9. Hizmetin Sürekliliği ve Sorumluluk Reddi</h2>
@@ -95,7 +95,7 @@ export const docs = [
         <p>Chaput is a social communication service that allows users to leave chaputs on profile trees, reply, create public or limited-visibility flows, follow other users, block or restrict users, report content, and use subscriptions or credits for certain digital features.</p>`,
 
         `<h2>2. Eligibility and Account</h2>
-        <p>You must be at least 13 years old, and meet any higher minimum age required by the law of your place of residence, to use Chaput. You agree to provide accurate, current, and personal account information when using the service.</p>
+        <p>You must be at least 15 years old, and meet any higher minimum age required by the law of your place of residence, to use Chaput. You agree to provide accurate, current, and personal account information when using the service.</p>
         <p>Account creation and login may be operated through email verification, verification codes, app-level device identifiers, sessions, and security checks in the relevant product version. You are responsible for protecting access to your email account, devices, and session credentials.</p>
         <p>You may not create unauthorized accounts on behalf of others, impersonate another person, maintain a misleading profile, or use the service for unlawful purposes.</p>`,
 
@@ -119,7 +119,7 @@ export const docs = [
         </ul>`,
 
         `<h2>6. Subscriptions, Credits, and Digital Purchases</h2>
-        <p>Chaput may offer certain digital features through subscriptions, single-use or multi-use credits, ad rewards, or similar digital-access models. The current code base indicates multiple credit types and subscription plans; the current product, price, currency, renewal period, and scope of benefits are governed by what is displayed in the app or relevant store interface.</p>
+        <p>Chaput may offer certain digital features through subscriptions, single use or multi use credits, ad rewards, or similar digital-access models. The digital products, subscription plans, credit types, and related entitlements available within the app may change from time to time. The applicable product, price, currency, renewal period, and scope of benefits shall be as displayed within the app, the relevant app store, or the purchase interface at the time of purchase.</p>
         <p>Apple billing may be used on iOS and Google Play billing may be used on Android. Third-party subscription-management infrastructure, such as RevenueCat, may be used as a service provider for purchase verification and entitlement syncing. For digital content, features, or benefits offered in the app, applicable store rules and these Terms apply together unless mandatory law requires otherwise.</p>
         <p>Consumed credits, used benefits, ad-earned entitlements, and transactions suspended for suspected abuse may be subject to additional review regarding refunds or restoration, subject to applicable law.</p>`,
 
@@ -129,7 +129,7 @@ export const docs = [
         <p>Complaints may be reviewed using both automated signals and human review. In serious cases, action may be taken without prior notice.</p>`,
 
         `<h2>8. Account Freeze, Deletion, and Termination</h2>
-        <p>The inspected code shows account freeze, unfreeze, and permanent deletion flows. A freeze may end sessions or suspend access; it is not the same as account deletion.</p>
+        <p>Chaput may allow user accounts to be temporarily frozen, suspended, or permanently deleted in certain situations. Freezing an account may result in active sessions being terminated, temporary loss of access to the account, or restrictions on certain features. Account freezing does not have the same legal or technical effect as permanent account deletion.</p>
         <p>If you delete your account, data that is no longer necessary to provide the service may be erased, destroyed, or anonymized. Some data may nevertheless be retained longer for legal obligations, disputes, security investigations, fraud prevention, purchase refunds, or entitlement restoration records.</p>`,
 
         `<h2>9. Service Availability and Disclaimer</h2>
@@ -197,7 +197,7 @@ export const docs = [
         <p>Bu etiketler hiçbir durumda mutlak gizlilik, tam anonimlik veya teknik olarak üçüncü kişilerce hiç erişilemeyeceği anlamına gelmez. Güvenlik, moderasyon, destek, hataların giderilmesi, saklama yükümlülükleri ve hukuki zorunluluklar nedeniyle içeriklere yetkili erişim mümkündür.</p>`,
 
         `<h2>6. Saklama Süreleri ve Silme</h2>
-        <p>Verileri, toplama amacının gerektirdiği süre boyunca ve ilgili mevzuatın izin verdiği veya zorunlu kıldığı ölçüde saklarız. İncelenen kod tabanı, örneğin doğrulama kodu kayıtlarının kısa süreli, yenileme belirteci kayıtlarının ise sınırlı süreli tutulduğunu göstermektedir. Satın alma kayıtları, raporlar, güvenlik kayıtları ve hukuki uyuşmazlık verileri daha uzun süre saklanabilir.</p>
+        <p>Personal data may be retained for as long as necessary for the purposes for which it was collected and to the extent permitted or required by applicable law. Verification records, session records, purchase records, reports, security records, and data related to legal disputes may be retained for different periods depending on the relevant operational, security, legal, or service requirements.</p>
         <p>Uygulamada hesap dondurma ve kalıcı silme akışları bulunmaktadır. Kalıcı silme sonrasında hizmet için gerekli olmayan veriler silinebilir, yok edilebilir veya anonim hale getirilebilir. Bununla birlikte, satın alma haklarının geri yüklenmesi amacıyla sınırlı bir geri yükleme kaydının tutulması, hukuki yükümlülükler veya güvenlik gerekçeleriyle bazı kayıtların daha uzun süre saklanması mümkündür.</p>`,
 
         `<h2>7. Güvenlik</h2>
@@ -261,7 +261,7 @@ export const docs = [
         <p>These labels must not be understood as meaning absolute secrecy, full anonymity, or technical impossibility of third-party access. Authorized access may still occur for security, moderation, support, bug fixing, recordkeeping, and legal compliance.</p>`,
 
         `<h2>6. Retention and Deletion</h2>
-        <p>We retain data for as long as necessary for the purpose of collection and to the extent permitted or required by law. The inspected code base indicates, for example, that verification-code records are short-lived, while refresh-token records are retained for a limited period. Purchase records, reports, security records, and legal-dispute data may be retained longer.</p>
+        <p>Personal data may be retained for as long as necessary for the purposes for which it was collected and to the extent permitted or required by applicable law. Verification records, session records, purchase records, reports, security records, and data related to legal disputes may be retained for different periods depending on the relevant operational, security, legal, or service requirements.</p>
         <p>The app includes account freeze and permanent deletion flows. After permanent deletion, data that is no longer needed for the service may be erased, destroyed, or anonymized. However, limited restore records may be retained to support entitlement restoration, and some records may be retained longer for legal or security reasons.</p>`,
 
         `<h2>7. Security</h2>
@@ -383,7 +383,7 @@ export const docs = [
         "Bu metin, aydınlatma metninden ayrı olarak ve işaret kutuları önceden seçili olmaksızın kullanılmak üzere hazırlanmış isteğe bağlı açık rıza taslağıdır.",
       blocks: [
         `<h2>1. Genel Esas</h2>
-        <p>Bu açık rıza metni, KVKK Aydınlatma Metni'nden ayrı olarak sunulmalıdır. Açık rıza, hizmetin temel ifası için zorunlu olmayan işlemler bakımından alınmalı; önceden işaretli kutu, hizmetten yararlanmayı bütünüyle engelleyen dayatma veya belirsiz “battaniye rıza” şeklinde kullanılmamalıdır.</p>`,
+        <p>Bu açık rıza metnini kabul etmekle aşağıda belirtilen hususlara rıza gösterilmiş olunur.</p>`,
 
         `<h2>2. Yurtdışı Aktarımı İçin Açık Rıza Metni</h2>
         <p>“KVKK Aydınlatma Metni'ni okudum. Chaput hizmetinin satın alma doğrulama, abonelik/hak yönetimi, push bildirimleri, teknik operasyon, güvenlik, dolandırıcılık önleme ve kullanıcı desteği süreçlerinin yürütülebilmesi amacıyla; kimlik, hesap, cihaz, bildirim, satın alma, kullanım ve kullanıcı içeriğiyle bağlantılı verilerimin, gerekli olması halinde Apple, Google, RevenueCat, Firebase Cloud Messaging ve benzeri yurtdışında yerleşik hizmet sağlayıcılara veya yurtdışındaki sistemlere aktarılmasına açık rıza veriyorum.”</p>`,
@@ -403,7 +403,7 @@ export const docs = [
         "This text is intended to be used separately from the privacy notice, with unticked checkboxes and only where explicit consent is actually required.",
       blocks: [
         `<h2>1. General Principle</h2>
-        <p>This explicit consent text must be presented separately from the KVKK Privacy Notice. Explicit consent should be obtained only for processing that is not strictly necessary for the core performance of the service; it should not be bundled through pre-ticked boxes, forced acceptance, or vague blanket consent.</p>`,
+        <p>By accepting this explicit consent text, you consent to the matters stated below.</p>`,
 
         `<h2>2. Explicit Consent for Cross-Border Transfers</h2>
         <p>“I have read the KVKK Privacy Notice. I explicitly consent to the transfer, where necessary for purchase verification, subscription or entitlement management, push notifications, technical operations, security, fraud prevention, and user support, of my identity, account, device, notification, purchase, usage, and user-content-related data to Apple, Google, RevenueCat, Firebase Cloud Messaging, and similar service providers located abroad or to systems located abroad.”</p>`,
@@ -491,7 +491,7 @@ export const docs = [
         "Chaput, kullanıcı güvenliği ve hukuka uyum amacıyla içerik moderasyonu ve şikâyet değerlendirme süreçleri yürütür.",
       blocks: [
         `<h2>1. Raporlama Araçları</h2>
-        <p>İncelenen mobil kod, en azından chaput ve mesaj raporlama akışlarının uygulama içinde desteklendiğini; ayrıca engelleme ve kullanıcı kısıtlama işlevlerinin bulunduğunu göstermektedir. Backend altyapısında ilave rapor türleri de desteklenebilir; ilgili sürümde kullanıcıya açıldığı ölçüde bu politika aynı şekilde uygulanır.</p>`,
+        <p>Chaput içerisinde chaput, mesaj veya benzeri kullanıcı içeriklerinin raporlanmasına yönelik özellikler ile engelleme ve kullanıcı kısıtlama işlevleri sunulabilir. Uygulamanın ilgili sürümünde kullanıcıya sunulan raporlama, engelleme veya kısıtlama araçları bakımından işbu politika ve topluluk kuralları uygulanır.</p>`,
 
         `<h2>2. İnceleme Kriterleri</h2>
         <p>Bir içerik veya hesap; Topluluk Kuralları, Kullanıcı Sözleşmesi, mağaza kuralları, çocuk güvenliği yükümlülükleri, dolandırıcılık önleme ilkeleri ve hukuki yükümlülükler bakımından incelenebilir. İnceleme, rapor sebebi, tekrar eden ihlal örüntüsü, güvenlik riski ve teknik kayıtlar birlikte değerlendirilerek yapılabilir.</p>`,
@@ -523,7 +523,7 @@ export const docs = [
         "Chaput operates content moderation and complaint-handling processes to protect users and comply with applicable law.",
       blocks: [
         `<h2>1. Reporting Tools</h2>
-        <p>The inspected mobile code shows that at least chaput and message reporting flows are supported in the app, and that block and user-restriction features are available. The backend may support additional report types; this policy applies to those as well to the extent they are enabled in a given version.</p>`,
+        <p>Chaput may provide features for reporting chaputs, messages, or similar user-generated content, as well as blocking and user-restriction functionality. This policy and the applicable community rules apply to any reporting, blocking, or restriction tools made available to users in the relevant version of the app.</p>`,
 
         `<h2>2. Review Criteria</h2>
         <p>Content or accounts may be reviewed against the Community Guidelines, Terms of Service, store policies, child-safety duties, anti-fraud principles, and legal obligations. Reviews may consider the report reason, repeat patterns of abuse, security risk, and relevant technical records.</p>`,
@@ -558,7 +558,7 @@ export const docs = [
         "Bu şartlar, Chaput içindeki dijital abonelikler, kredi ürünleri, reklam ödülleri ve satın alma doğrulama süreçleri için uygulanır.",
       blocks: [
         `<h2>1. Dijital Ürün Türleri</h2>
-        <p>İncelenen kod tabanı, Chaput içinde yenilenen abonelik planları ile farklı işlevler için kullanılan kredi türleri bulunduğunu göstermektedir. Bunlar; chaput başlatma, gizli veya özel modlar, fısıltı, canlandırma veya benzeri ürün özellikleri için kullanılabilir. Uygulamada gösterilen ürün adı, kapsamı, fiyatı ve hak dönemi geçerlidir.</p>`,
+        <p>Chaput içerisinde yenilenen abonelik planları ile farklı işlevler için kullanılabilen çeşitli dijital kredi türleri sunulabilir. Bu krediler; chaput başlatma, gizli veya özel modlar, fısıltı özellikleri, sohbet canlandırma işlemleri veya benzeri uygulama özellikleri kapsamında kullanılabilir. Uygulamada, satın alma ekranında veya ilgili mağaza sayfasında gösterilen ürün adı, kapsamı, fiyatı ve hak dönemi geçerli olacaktır.</p>`,
 
         `<h2>2. Mağaza ve Ödeme Altyapısı</h2>
         <p>iOS işlemleri Apple App Store, Android işlemleri Google Play üzerinden yürütülebilir. Satın alma doğrulama ve hak eşleştirme için RevenueCat veya benzeri üçüncü taraf altyapılar hizmet sağlayıcı olarak kullanılabilir. Mağaza makbuzu, işlem kimliği, ürün kimliği ve benzeri kayıtlar hesabınızdaki hakların doğrulanması amacıyla işlenebilir.</p>`,
@@ -587,7 +587,7 @@ export const docs = [
         "These terms apply to digital subscriptions, credits, ad rewards, and purchase-verification processes within Chaput.",
       blocks: [
         `<h2>1. Types of Digital Products</h2>
-        <p>The inspected code base indicates that Chaput offers recurring subscription plans and multiple credit types used for different features. These may apply to starting chaputs, hidden or special modes, whispers, revives, or similar product functionality. The product name, scope, price, and entitlement period shown in the app control the purchase.</p>`,
+        <p>Chaput may offer recurring subscription plans and various types of digital credits that can be used for different features within the app. These credits may be used for starting chaputs, accessing hidden or special modes, using whisper features, reviving conversations, or similar in-app functionality. The applicable product name, scope, price, and entitlement period shall be as displayed within the app, the purchase interface, or the relevant app store at the time of purchase.</p>`,
 
         `<h2>2. Store and Payment Infrastructure</h2>
         <p>iOS transactions may be processed through Apple App Store and Android transactions through Google Play. RevenueCat or similar third-party infrastructure may be used as a service provider for purchase verification and entitlement matching. Store receipts, transaction identifiers, product identifiers, and similar records may be processed to validate rights associated with your account.</p>`,
@@ -720,7 +720,7 @@ export const docs = [
         <p>Hesap dondurma; erişimin askıya alınması, oturumların kapatılması veya hesabın geçici olarak pasif hale getirilmesi sonucunu doğurabilir. Hesap silme ise, hesabın kalıcı olarak sonlandırılmasını ve ilgili veri işleme amaçlarının gözden geçirilmesini ifade eder.</p>`,
 
         `<h2>2. Hesap Silme Talebi</h2>
-        <p>İncelenen uygulama kodu, hesap silme akışının uygulama içinde mevcut olduğunu göstermektedir. Ayrıca gerekli hallerde ${email} üzerinden destek talebi de iletebilirsiniz. Kimlik doğrulama, kötüye kullanım önleme ve yasal kayıt incelemesi için ek bilgi istenebilir.</p>`,
+        <p>Chaput içerisinde hesap silme işlemlerine yönelik araçlar sunulabilir. Ayrıca gerekli durumlarda <strong>hello@goktigin.com</strong> adresi üzerinden destek talebi iletilebilir. Kimlik doğrulama, kötüye kullanımın önlenmesi, güvenlik kontrolleri ve yasal yükümlülüklerin yerine getirilmesi amacıyla ek bilgi veya doğrulama talep edilebilir.</p>`,
 
         `<h2>3. Silinebilecek Veriler</h2>
         <p>Uygun olduğu ölçüde; profil verileri, takip ilişkileri, blok kayıtları, bildirim kayıtları, push token kayıtları, chaput mesajları, mesaj beğenileri, görünüm kayıtları, satın alma dışı uygulama kayıtları ve yüklenen profil fotoğrafı dosyaları silinebilir veya sistemden çıkarılabilir.</p>`,
@@ -749,7 +749,7 @@ export const docs = [
         <p>An account freeze may suspend access, end sessions, or make the account temporarily inactive. Account deletion refers to permanently terminating the account and reassessing the data-processing purposes associated with it.</p>`,
 
         `<h2>2. Requesting Deletion</h2>
-        <p>The inspected app code indicates that an account deletion flow exists in the app. Where necessary, you may also contact support at ${email}. We may request additional information for identity verification, abuse prevention, or legal record review.</p>`,
+        <p>Chaput may provide in app tools and processes for account deletion. Where necessary, users may also contact support via <strong>${email}</strong>. Additional information or verification may be requested for identity verification, abuse prevention, security reviews, or compliance with legal obligations.</p>`,
 
         `<h2>3. Data That May Be Deleted</h2>
         <p>Where appropriate, profile data, follow relationships, block records, notification records, push token records, chaput messages, message likes, view records, non-purchase application records, and uploaded profile photo files may be deleted or removed from the system.</p>`,
@@ -775,13 +775,13 @@ export const docs = [
       description:
         "Chaput'un yaş sınırı, çocukların verilerinin korunması ve ebeveyn/veli başvuru süreçleri.",
       summary:
-        "Chaput genel kullanım için 13 yaş altındaki çocuklara yönelik tasarlanmamıştır.",
+        "Chaput genel kullanım için 15 yaş altındaki çocuklara yönelik tasarlanmamıştır.",
       blocks: [
         `<h2>1. Yaş Sınırı</h2>
-        <p>İncelenen kod tabanı, doğum tarihi kontrolleri üzerinden 13 yaş altındaki kullanıcıların hesap oluşturmasının veya profilini tamamlamasının engellendiğini göstermektedir. Yerel hukuk daha yüksek bir yaş sınırı gerektiriyorsa o sınır uygulanmalıdır.</p>`,
+        <p>Chaput, hesap oluşturma süreçlerinde doğum tarihi doğrulama mekanizmaları üzerinden asgari yaş kontrolleri uygulayabilir. Geçerli minimum yaş şartını sağlamayan kullanıcıların hesap oluşturması veya hesap işlemlerini tamamlaması engellenebilir. Yerel hukukun daha yüksek bir yaş sınırı öngördüğü durumlarda ilgili yasal yaş sınırı uygulanır.</p>`,
 
         `<h2>2. Bilerek Veri Toplamama İlkesi</h2>
-        <p>13 yaş altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamıyoruz. Böyle bir hesabın oluşturulduğunu, yanlış yaş beyanı verildiğini veya çocuk güvenliğini tehlikeye atan bir kullanım bulunduğunu öğrenirsek hesabı askıya alabilir, silebilir ve gerekli güvenlik adımlarını atabiliriz.</p>`,
+        <p>15 yaş altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamıyoruz. Böyle bir hesabın oluşturulduğunu, yanlış yaş beyanı verildiğini veya çocuk güvenliğini tehlikeye atan bir kullanım bulunduğunu öğrenirsek hesabı askıya alabilir, silebilir ve gerekli güvenlik adımlarını atabiliriz.</p>`,
 
         `<h2>3. Ebeveyn veya Veli Başvuruları</h2>
         <p>Bir ebeveyn veya yasal veli, çocuğa ait verilerin sistemlerimizde işlendiğini düşünüyorsa ${email} üzerinden bizimle iletişime geçebilir. Doğrulama sonrasında hesap kaldırma veya veri inceleme süreçleri yürütülebilir.</p>`,
@@ -792,13 +792,13 @@ export const docs = [
       description:
         "Chaput's age threshold, child data handling principles, and parent or guardian request process.",
       summary:
-        "Chaput is not designed for general use by children under 13.",
+        "Chaput is not designed for general use by children under 15.",
       blocks: [
         `<h2>1. Age Threshold</h2>
-        <p>The inspected code base indicates that users under 13 are prevented from creating or completing an account through date-of-birth checks. If local law requires a higher minimum age, that higher threshold should apply.</p>`,
+        <p>Chaput may apply minimum age requirements during account creation through date of birth verification mechanisms. Users who do not meet the applicable minimum age requirement may be prevented from creating or completing an account. Where local law requires a higher minimum age threshold, the applicable legal requirement shall prevail.</p>`,
 
-        `<h2>2. No Knowing Collection from Children Under 13</h2>
-        <p>We do not intend to knowingly collect personal data from children under 13. If we learn that such an account has been created, that an age has been misstated, or that child safety is at risk, we may suspend or delete the account and take necessary safety steps.</p>`,
+        `<h2>2. No Knowing Collection from Children Under 15</h2>
+        <p>We do not intend to knowingly collect personal data from children under 15. If we learn that such an account has been created, that an age has been misstated, or that child safety is at risk, we may suspend or delete the account and take necessary safety steps.</p>`,
 
         `<h2>3. Parent or Guardian Requests</h2>
         <p>If a parent or legal guardian believes that a child's data is being processed in our systems, they may contact us at ${email}. After verification, we may review the account and proceed with removal or related data-handling measures.</p>`,
