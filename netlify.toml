@@ -1,2 +1,29 @@
 [build]
   publish = "."
+
+[[redirects]]
+  from = "/u/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/c/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/post/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/.well-known/apple-app-site-association"
+  [headers.values]
+    Content-Type = "application/json"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/.well-known/assetlinks.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Cache-Control = "public, max-age=3600"
