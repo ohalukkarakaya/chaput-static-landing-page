@@ -28,6 +28,12 @@
     Cache-Control = "public, max-age=3600"
 
 [[headers]]
+  for = "/apple-app-site-association"
+  [headers.values]
+    Content-Type = "application/json"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
   for = "/.well-known/assetlinks.json"
   [headers.values]
     Content-Type = "application/json"

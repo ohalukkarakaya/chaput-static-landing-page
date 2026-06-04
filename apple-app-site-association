@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "7QYP87CAUN.com.goktigin.chaput",
+        "paths": [
+          "/me/*",
+          "/u/*",
+          "/c/*",
+          "/post/*",
+          "/*"
+        ]
+      }
+    ]
+  }
+}
