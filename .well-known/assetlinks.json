@@ -7,6 +7,8 @@
       "namespace": "android_app",
       "package_name": "com.goktigin.chaput",
       "sha256_cert_fingerprints": [
+        "C4:EA:67:55:04:A0:0F:FF:6C:6B:93:16:0B:8E:50:51:50:AC:1B:CF:DE:09:18:38:84:6E:A2:C6:FA:3F:48:27",
+        "51:9B:51:15:E6:D1:B5:42:49:2C:04:53:A4:26:B0:0D:9B:F1:CC:15:D3:82:48:9B:4A:41:92:4A:2E:74:51:05",
         "A6:41:51:83:4E:5E:76:7C:A7:F9:79:2F:C6:3A:D9:7E:E3:50:74:6C:44:FC:9C:44:B3:4A:37:B3:5E:B3:1B:DE"
       ]
     }

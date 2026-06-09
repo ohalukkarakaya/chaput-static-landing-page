@@ -21,6 +21,11 @@
   to = "/index.html"
   status = 200
 
+[[redirects]]
+  from = "/profile/*"
+  to = "/index.html"
+  status = 200
+
 [[headers]]
   for = "/.well-known/apple-app-site-association"
   [headers.values]
