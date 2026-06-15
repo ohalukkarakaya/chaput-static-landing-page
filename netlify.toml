@@ -3,7 +3,7 @@
 
 [[redirects]]
   from = "/me/*"
-  to = "/.netlify/functions/share-meta?share_path=:splat"
+  to = "/index.html"
   status = 200
 
 [[redirects]]

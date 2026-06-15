@@ -1,5 +1,5 @@
 const SITE_ORIGIN = 'https://chaput.app';
-const API_ORIGIN = process.env.CHAPUT_API_BASE_URL || 'https://api.chaput.app';
+const DEFAULT_API_ORIGIN = 'https://api.chaput.app';
 const DEFAULT_IMAGE = `${SITE_ORIGIN}/assets/images/large-logo.png`;
 const ANDROID_STORE =
   'https://play.google.com/store/apps/details?id=com.goktigin.chaput';
@@ -14,8 +14,8 @@ function escapeHtml(value) {
     .replace(/'/g, '&#39;');
 }
 
-function parseSharePath(path) {
-  const parts = String(path || '')
+function parseSharePath(pathname) {
+  const parts = pathname
     .split('/')
     .filter(Boolean)
     .map((part) => decodeURIComponent(part));
@@ -28,23 +28,7 @@ function parseSharePath(path) {
   };
 }
 
-function originalSharePath(event) {
-  const sharePath = event.queryStringParameters?.share_path;
-  if (sharePath) {
-    return `/me/${String(sharePath).replace(/^\/+/, '')}`;
-  }
-  if (event.rawUrl) {
-    try {
-      return new URL(event.rawUrl).pathname;
-    } catch (_) {
-      return event.path || '/';
-    }
-  }
-  return event.path || '/';
-}
-
-function fallbackMeta(path) {
-  const canonical = `${SITE_ORIGIN}${path || '/'}`;
+function fallbackMeta(url) {
   return {
     ok: true,
     kind: 'profile',
@@ -53,45 +37,50 @@ function fallbackMeta(path) {
       'Open this Chaput profile tree and discover the conversations tied to it.',
     image_url: DEFAULT_IMAGE,
     image_alt: 'Chaput profile tree',
-    canonical_url: canonical,
+    canonical_url: `${SITE_ORIGIN}${url.pathname}`,
     noindex: false,
   };
 }
 
-async function loadMeta(path) {
-  const parsed = parseSharePath(path);
-  if (!parsed) return fallbackMeta(path);
+async function loadMeta(url, env) {
+  const parsed = parseSharePath(url.pathname);
+  if (!parsed) return fallbackMeta(url);
 
   const params = new URLSearchParams({ username: parsed.username });
   if (parsed.threadId) params.set('thread_id', parsed.threadId);
   if (parsed.messageId) params.set('message_id', parsed.messageId);
 
+  const apiOrigin = env.CHAPUT_API_BASE_URL || DEFAULT_API_ORIGIN;
   try {
-    const response = await fetch(`${API_ORIGIN}/share/metadata?${params}`, {
+    const response = await fetch(`${apiOrigin}/share/metadata?${params}`, {
       headers: { Accept: 'application/json' },
+      cf: { cacheTtl: 300, cacheEverything: true },
     });
-    if (!response.ok) return fallbackMeta(path);
+    if (!response.ok) return fallbackMeta(url);
+
     const data = await response.json();
-    if (!data || data.ok !== true) return fallbackMeta(path);
+    if (!data || data.ok !== true) return fallbackMeta(url);
+
     return {
-      ...fallbackMeta(path),
+      ...fallbackMeta(url),
       ...data,
       image_url: data.image_url || DEFAULT_IMAGE,
-      canonical_url: data.canonical_url || `${SITE_ORIGIN}${path}`,
+      canonical_url: data.canonical_url || `${SITE_ORIGIN}${url.pathname}`,
     };
   } catch (_) {
-    return fallbackMeta(path);
+    return fallbackMeta(url);
   }
 }
 
-function renderHtml(meta, path) {
+function renderHtml(meta, requestUrl) {
   const title = escapeHtml(meta.title);
   const description = escapeHtml(meta.description);
   const image = escapeHtml(meta.image_url || DEFAULT_IMAGE);
   const imageAlt = escapeHtml(meta.image_alt || 'Chaput');
-  const canonical = escapeHtml(meta.canonical_url || `${SITE_ORIGIN}${path}`);
+  const canonical = escapeHtml(meta.canonical_url || requestUrl.href);
   const robots = meta.noindex ? 'noindex, follow' : 'index, follow';
-  const deepPath = escapeHtml(path || '/');
+  const pathAndQuery = requestUrl.pathname + requestUrl.search;
+  const deepPath = pathAndQuery.replace(/^\//, '');
 
   return `<!doctype html>
 <html lang="en">
@@ -116,74 +105,49 @@ function renderHtml(meta, path) {
 <meta name="twitter:description" content="${description}">
 <meta name="twitter:image" content="${image}">
 <link rel="shortcut icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <style>
-  :root { color-scheme: light; }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    padding: 28px;
-    background: #efeeff;
-    color: #050505;
-    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  }
-  main {
-    width: min(440px, 100%);
-    display: grid;
-    gap: 18px;
-    text-align: center;
-  }
-  .preview {
-    padding: 28px 22px;
-    border: 1px solid rgba(0,0,0,.08);
-    border-radius: 28px;
-    background: rgba(255,255,255,.72);
-    box-shadow: 0 22px 60px rgba(20,20,20,.10);
-    backdrop-filter: blur(18px);
-  }
-  img {
-    width: 108px;
-    height: 108px;
-    object-fit: cover;
-    border-radius: 34px;
-    border: 4px solid #fff;
-    box-shadow: 0 12px 28px rgba(0,0,0,.14);
-  }
-  h1 {
-    margin: 18px 0 8px;
-    font-size: clamp(28px, 7vw, 38px);
-    line-height: 1.02;
-    letter-spacing: 0;
-  }
-  p {
-    margin: 0;
-    color: rgba(0,0,0,.62);
-    font-size: 16px;
-    line-height: 1.45;
-    font-weight: 600;
-  }
-  .actions {
-    display: grid;
-    gap: 10px;
-  }
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 54px;
-    border-radius: 18px;
-    text-decoration: none;
-    font-weight: 900;
-  }
-  .primary { background: #050505; color: #fff; }
-  .secondary {
-    background: rgba(255,255,255,.72);
-    color: #050505;
-    border: 1px solid rgba(0,0,0,.08);
-  }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  background: #efeeff;
+  color: #050505;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+main { width: min(440px, 100%); display: grid; gap: 18px; text-align: center; }
+.preview {
+  padding: 28px 22px;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 28px;
+  background: rgba(255,255,255,.72);
+  box-shadow: 0 22px 60px rgba(20,20,20,.10);
+  backdrop-filter: blur(18px);
+}
+img {
+  width: 108px;
+  height: 108px;
+  object-fit: cover;
+  border-radius: 34px;
+  border: 4px solid #fff;
+  box-shadow: 0 12px 28px rgba(0,0,0,.14);
+}
+h1 { margin: 18px 0 8px; font-size: clamp(28px, 7vw, 38px); line-height: 1.02; letter-spacing: 0; }
+p { margin: 0; color: rgba(0,0,0,.62); font-size: 16px; line-height: 1.45; font-weight: 600; }
+.actions { display: grid; gap: 10px; }
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: 900;
+}
+.primary { background: #050505; color: #fff; }
+.secondary { background: rgba(255,255,255,.72); color: #050505; border: 1px solid rgba(0,0,0,.08); }
 </style>
 </head>
 <body>
@@ -194,7 +158,7 @@ function renderHtml(meta, path) {
     <p>${description}</p>
   </section>
   <nav class="actions">
-    <a class="primary" id="open-app" href="app.chaput://${deepPath.replace(/^\//, '')}">Open in Chaput</a>
+    <a class="primary" id="open-app" href="app.chaput://${escapeHtml(deepPath)}">Open in Chaput</a>
     <a class="secondary" id="store-link" href="${IOS_STORE}">Get Chaput</a>
   </nav>
 </main>
@@ -203,8 +167,7 @@ function renderHtml(meta, path) {
   var ua=navigator.userAgent||"";
   var isAndroid=/Android/i.test(ua);
   var isIOS=/iPad|iPhone|iPod/.test(ua)&&!window.MSStream;
-  var path=${JSON.stringify(path || '/')};
-  var cleanPath=path.replace(/^\\//,"");
+  var cleanPath=${JSON.stringify(deepPath)};
   var androidStore=${JSON.stringify(ANDROID_STORE)};
   var iosStore=${JSON.stringify(IOS_STORE)};
   var store=isIOS?iosStore:androidStore;
@@ -230,15 +193,16 @@ function renderHtml(meta, path) {
 </html>`;
 }
 
-export async function handler(event) {
-  const path = originalSharePath(event);
-  const meta = await loadMeta(path);
-  return {
-    statusCode: 200,
-    headers: {
-      'Content-Type': 'text/html; charset=utf-8',
-      'Cache-Control': 'public, max-age=300, s-maxage=300',
-    },
-    body: renderHtml(meta, path),
-  };
-}
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    const meta = await loadMeta(url, env || {});
+    return new Response(renderHtml(meta, url), {
+      status: 200,
+      headers: {
+        'content-type': 'text/html; charset=utf-8',
+        'cache-control': 'public, max-age=300, s-maxage=300',
+      },
+    });
+  },
+};
