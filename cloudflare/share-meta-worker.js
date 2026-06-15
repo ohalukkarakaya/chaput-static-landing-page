@@ -61,12 +61,18 @@ async function loadMeta(url, env) {
     const data = await response.json();
     if (!data || data.ok !== true) return fallbackMeta(url);
 
-    return {
+    const merged = {
       ...fallbackMeta(url),
       ...data,
       image_url: data.image_url || DEFAULT_IMAGE,
       canonical_url: data.canonical_url || `${SITE_ORIGIN}${url.pathname}`,
     };
+    if (merged.kind === 'profile' && merged.username) {
+      const displayName = merged.full_name || `@${merged.username}`;
+      merged.title = `${displayName} (@${merged.username}) | Chaput profile`;
+      merged.description = 'Open this profile tree on Chaput.';
+    }
+    return merged;
   } catch (_) {
     return fallbackMeta(url);
   }
@@ -77,7 +83,8 @@ function renderHtml(meta, requestUrl) {
   const description = escapeHtml(meta.description);
   const image = escapeHtml(meta.image_url || DEFAULT_IMAGE);
   const imageAlt = escapeHtml(meta.image_alt || 'Chaput');
-  const canonical = escapeHtml(meta.canonical_url || requestUrl.href);
+  const canonical = escapeHtml(meta.canonical_url || `${SITE_ORIGIN}${requestUrl.pathname}`);
+  const shareUrl = escapeHtml(requestUrl.href);
   const robots = meta.noindex ? 'noindex, follow' : 'index, follow';
   const pathAndQuery = requestUrl.pathname + requestUrl.search;
   const deepPath = pathAndQuery.replace(/^\//, '');
@@ -96,14 +103,18 @@ function renderHtml(meta, requestUrl) {
 <meta property="og:site_name" content="Chaput">
 <meta property="og:title" content="${title}">
 <meta property="og:description" content="${description}">
-<meta property="og:url" content="${canonical}">
+<meta property="og:url" content="${shareUrl}">
 <meta property="og:image" content="${image}">
 <meta property="og:image:secure_url" content="${image}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="300">
+<meta property="og:image:height" content="300">
 <meta property="og:image:alt" content="${imageAlt}">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${title}">
 <meta name="twitter:description" content="${description}">
 <meta name="twitter:image" content="${image}">
+<meta name="twitter:image:alt" content="${imageAlt}">
 <link rel="shortcut icon" href="/favicon.ico">
 <style>
 * { box-sizing: border-box; }
