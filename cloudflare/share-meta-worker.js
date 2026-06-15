@@ -3,7 +3,32 @@ const DEFAULT_API_ORIGIN = 'https://api.chaput.app';
 const DEFAULT_IMAGE = `${SITE_ORIGIN}/assets/images/large-logo.png`;
 const ANDROID_STORE =
   'https://play.google.com/store/apps/details?id=com.goktigin.chaput';
-const IOS_STORE = 'https://apps.apple.com/us/search?term=app.chaput';
+const IOS_STORE = 'https://apps.apple.com/us/search?term=com.goktigin.chaput';
+const APPLE_APP_SITE_ASSOCIATION = {
+  applinks: {
+    apps: [],
+    details: [
+      {
+        appID: '7QYP87CAUN.com.goktigin.chaput',
+        paths: ['/me/*', '/u/*', '/c/*', '/post/*', '/*'],
+      },
+    ],
+  },
+};
+const ASSET_LINKS = [
+  {
+    relation: ['delegate_permission/common.handle_all_urls'],
+    target: {
+      namespace: 'android_app',
+      package_name: 'com.goktigin.chaput',
+      sha256_cert_fingerprints: [
+        'C4:EA:67:55:04:A0:0F:FF:6C:6B:93:16:0B:8E:50:51:50:AC:1B:CF:DE:09:18:38:84:6E:A2:C6:FA:3F:48:27',
+        '51:9B:51:15:E6:D1:B5:42:49:2C:04:53:A4:26:B0:0D:9B:F1:CC:15:D3:82:48:9B:4A:41:92:4A:2E:74:51:05',
+        'A6:41:51:83:4E:5E:76:7C:A7:F9:79:2F:C6:3A:D9:7E:E3:50:74:6C:44:FC:9C:44:B3:4A:37:B3:5E:B3:1B:DE',
+      ],
+    },
+  },
+];
 
 function escapeHtml(value) {
   return String(value ?? '')
@@ -169,7 +194,7 @@ a {
     <p>${description}</p>
   </section>
   <nav class="actions">
-    <a class="primary" id="open-app" href="app.chaput://${escapeHtml(deepPath)}">Open in Chaput</a>
+    <a class="primary" id="open-app" href="${shareUrl}">Open in Chaput</a>
     <a class="secondary" id="store-link" href="${IOS_STORE}">Get Chaput</a>
   </nav>
 </main>
@@ -177,13 +202,10 @@ a {
 (function(){
   var ua=navigator.userAgent||"";
   var isAndroid=/Android/i.test(ua);
-  var isIOS=/iPad|iPhone|iPod/.test(ua)&&!window.MSStream;
   var cleanPath=${JSON.stringify(deepPath)};
   var androidStore=${JSON.stringify(ANDROID_STORE)};
-  var iosStore=${JSON.stringify(IOS_STORE)};
-  var store=isIOS?iosStore:androidStore;
   var storeLink=document.getElementById("store-link");
-  if(storeLink){ storeLink.href=store; }
+  if(storeLink){ storeLink.href=isAndroid?androidStore:${JSON.stringify(IOS_STORE)}; }
   var openLink=document.getElementById("open-app");
   if(isAndroid){
     var intent="intent://chaput.app/"+cleanPath+"#Intent;scheme=https;package=com.goktigin.chaput;S.browser_fallback_url="+encodeURIComponent(androidStore)+";end";
@@ -191,22 +213,35 @@ a {
     window.setTimeout(function(){ window.location.href=intent; }, 80);
     return;
   }
-  if(isIOS){
-    var deepLink="app.chaput://"+cleanPath;
-    if(openLink) openLink.href=deepLink;
-    var timeout=setTimeout(function(){ if(!document.hidden){ window.location.href=iosStore; } },1800);
-    window.addEventListener("pagehide",function(){ clearTimeout(timeout); });
-    window.location.href=deepLink;
-  }
 })();
 </script>
 </body>
 </html>`;
 }
 
+function jsonResponse(value) {
+  return new Response(JSON.stringify(value), {
+    status: 200,
+    headers: {
+      'content-type': 'application/json; charset=utf-8',
+      'cache-control': 'public, max-age=3600, s-maxage=3600',
+    },
+  });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (
+      url.pathname === '/.well-known/apple-app-site-association' ||
+      url.pathname === '/apple-app-site-association'
+    ) {
+      return jsonResponse(APPLE_APP_SITE_ASSOCIATION);
+    }
+    if (url.pathname === '/.well-known/assetlinks.json') {
+      return jsonResponse(ASSET_LINKS);
+    }
+
     const meta = await loadMeta(url, env || {});
     return new Response(renderHtml(meta, url), {
       status: 200,
