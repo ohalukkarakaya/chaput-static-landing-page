@@ -1,4 +1,4 @@
-/me/* /index.html 200
+/me/* /.netlify/functions/share-meta?share_path=:splat 200
 /u/* /index.html 200
 /c/* /index.html 200
 /post/* /index.html 200
