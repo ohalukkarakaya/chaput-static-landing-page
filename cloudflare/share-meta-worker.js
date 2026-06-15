@@ -202,16 +202,25 @@ a {
 (function(){
   var ua=navigator.userAgent||"";
   var isAndroid=/Android/i.test(ua);
+  var isIOS=/iPad|iPhone|iPod/.test(ua)&&!window.MSStream;
   var cleanPath=${JSON.stringify(deepPath)};
   var androidStore=${JSON.stringify(ANDROID_STORE)};
+  var iosStore=${JSON.stringify(IOS_STORE)};
   var storeLink=document.getElementById("store-link");
-  if(storeLink){ storeLink.href=isAndroid?androidStore:${JSON.stringify(IOS_STORE)}; }
+  if(storeLink){ storeLink.href=isAndroid?androidStore:iosStore; }
   var openLink=document.getElementById("open-app");
   if(isAndroid){
     var intent="intent://chaput.app/"+cleanPath+"#Intent;scheme=https;package=com.goktigin.chaput;S.browser_fallback_url="+encodeURIComponent(androidStore)+";end";
     if(openLink) openLink.href=intent;
     window.setTimeout(function(){ window.location.href=intent; }, 80);
     return;
+  }
+  if(isIOS){
+    var deepLink="com.goktigin.chaput://chaput.app/"+cleanPath;
+    if(openLink) openLink.href=deepLink;
+    var timeout=setTimeout(function(){ if(!document.hidden){ window.location.href=iosStore; } },1800);
+    window.addEventListener("pagehide",function(){ clearTimeout(timeout); });
+    window.setTimeout(function(){ window.location.href=deepLink; }, 80);
   }
 })();
 </script>
