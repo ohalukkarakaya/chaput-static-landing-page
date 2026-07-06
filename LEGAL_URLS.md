@@ -16,7 +16,7 @@
 - `/legal/tr/refunds/` - İade ve İptal Politikası
 - `/legal/tr/ugc/` - Kullanıcı İçeriği Politikası
 - `/legal/tr/deletion/` - Hesap Silme ve Veri Silme Politikası
-- `/legal/tr/children/` - Çocukların Gizliliği Bildirimi
+- `/legal/tr/children/` - Çocuk Güvenliği Standartları ve Çocukların Gizliliği Bildirimi
 - `/legal/tr/store-privacy/` - App Store / Google Play Kısa Privacy Disclosure Metinleri
 
 ## English
@@ -30,7 +30,7 @@
 - `/legal/en/refunds/` - Refund and Cancellation Policy
 - `/legal/en/ugc/` - User Generated Content Policy
 - `/legal/en/deletion/` - Account and Data Deletion Policy
-- `/legal/en/children/` - Children's Privacy Notice
+- `/legal/en/children/` - Child Safety Standards and Children’s Privacy Notice
 - `/legal/en/store-privacy/` - App Store / Google Play Short Privacy Disclosures
 
 ## Aliases

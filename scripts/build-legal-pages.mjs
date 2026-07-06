@@ -76,7 +76,15 @@ function buildSeoDescription(lang, title, description) {
   return trimMetaDescription(`${prefix} ${description}`);
 }
 
-function webPageJsonLd({ lang, title, description, canonical, type = "WebPage" }) {
+function webPageJsonLd({
+  lang,
+  title,
+  description,
+  canonical,
+  type = "WebPage",
+  publishedAt: pagePublishedAt = publishedAt,
+  modifiedAt: pageModifiedAt = pagePublishedAt,
+}) {
   return JSON.stringify({
     "@context": "https://schema.org",
     "@type": type,
@@ -85,8 +93,8 @@ function webPageJsonLd({ lang, title, description, canonical, type = "WebPage" }
     description,
     url: canonical,
     inLanguage: lang === "tr" ? "tr-TR" : "en-US",
-    datePublished: publishedAt,
-    dateModified: publishedAt,
+    datePublished: pagePublishedAt,
+    dateModified: pageModifiedAt,
     publisher: {
       "@type": "Organization",
       name: site.brand,
@@ -109,8 +117,11 @@ function pageShell({
   breadcrumbs,
   content,
   indexHref,
+  pageMeta = {},
 }) {
   const dates = lang === "tr" ? site.trDates : site.enDates;
+  const effectiveDate = pageMeta.effectiveDate ?? dates.effective;
+  const updatedDate = pageMeta.updatedDate ?? dates.updated;
   const labels =
     lang === "tr"
       ? {
@@ -131,8 +142,11 @@ function pageShell({
           switch: "Türkçe",
           footerCopy: `© 2026 ${site.brand}.`,
         };
-  const seoTitle = buildSeoTitle(lang, title);
-  const seoDescription = buildSeoDescription(lang, title, description);
+  const seoTitle = pageMeta.metaTitle ?? buildSeoTitle(lang, title);
+  const seoDescription =
+    pageMeta.metaDescription ?? buildSeoDescription(lang, title, description);
+  const pagePublishedAt = pageMeta.publishedAt ?? publishedAt;
+  const pageModifiedAt = pageMeta.modifiedAt ?? pagePublishedAt;
   const locale = lang === "tr" ? "tr_TR" : "en_US";
   const altLocale = lang === "tr" ? "en_US" : "tr_TR";
 
@@ -161,8 +175,8 @@ function pageShell({
   <meta property="og:site_name" content="${site.brand}">
   <meta property="og:image" content="${ogImage}">
   <meta property="og:image:alt" content="${site.brand} logo">
-  <meta property="article:published_time" content="${publishedAt}">
-  <meta property="article:modified_time" content="${publishedAt}">
+  <meta property="article:published_time" content="${pagePublishedAt}">
+  <meta property="article:modified_time" content="${pageModifiedAt}">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${escapeHtml(seoTitle)}">
   <meta name="twitter:description" content="${escapeHtml(seoDescription)}">
@@ -174,6 +188,8 @@ function pageShell({
     description: seoDescription,
     canonical,
     type: "Article",
+    publishedAt: pagePublishedAt,
+    modifiedAt: pageModifiedAt,
   })}</script>
   <link rel="stylesheet" href="/assets/app.css">
   <link rel="stylesheet" href="/assets/legal.css">
@@ -193,8 +209,8 @@ function pageShell({
       <article class="legal-article">
         <header class="legal-hero">
           <div class="legal-hero__meta">
-            <span>${labels.effective}: ${dates.effective}</span>
-            <span>${labels.updated}: ${dates.updated}</span>
+            <span>${labels.effective}: ${effectiveDate}</span>
+            <span>${labels.updated}: ${updatedDate}</span>
           </div>
           <h1 class="legal-title">${escapeHtml(title)}</h1>
           <p class="legal-summary">${escapeHtml(summary)}</p>
@@ -465,6 +481,7 @@ async function buildDocs() {
         breadcrumbs: doc.tr.title,
         content: doc.tr.blocks.join("\n"),
         indexHref: "/legal/tr/",
+        pageMeta: doc.tr.meta,
       }),
     );
 
@@ -480,6 +497,7 @@ async function buildDocs() {
         breadcrumbs: doc.en.title,
         content: doc.en.blocks.join("\n"),
         indexHref: "/legal/en/",
+        pageMeta: doc.en.meta,
       }),
     );
   }
@@ -540,13 +558,23 @@ async function buildAliasesAndNotes() {
 
 async function buildSitemap() {
   const urls = [
-    { loc: `${site.domain}/`, priority: "1.0", changefreq: "weekly" },
-    { loc: `${site.domain}/legal/`, priority: "0.8", changefreq: "monthly" },
-    { loc: `${site.domain}/legal/tr/`, priority: "0.7", changefreq: "monthly" },
-    { loc: `${site.domain}/legal/en/`, priority: "0.7", changefreq: "monthly" },
+    { loc: `${site.domain}/`, priority: "1.0", changefreq: "weekly", lastmod: publishedAt },
+    { loc: `${site.domain}/legal/`, priority: "0.8", changefreq: "monthly", lastmod: publishedAt },
+    { loc: `${site.domain}/legal/tr/`, priority: "0.7", changefreq: "monthly", lastmod: publishedAt },
+    { loc: `${site.domain}/legal/en/`, priority: "0.7", changefreq: "monthly", lastmod: publishedAt },
     ...docs.flatMap((doc) => [
-      { loc: absoluteFor("tr", doc.slug), priority: "0.6", changefreq: "monthly" },
-      { loc: absoluteFor("en", doc.slug), priority: "0.6", changefreq: "monthly" },
+      {
+        loc: absoluteFor("tr", doc.slug),
+        priority: "0.6",
+        changefreq: "monthly",
+        lastmod: doc.tr.meta?.modifiedAt ?? publishedAt,
+      },
+      {
+        loc: absoluteFor("en", doc.slug),
+        priority: "0.6",
+        changefreq: "monthly",
+        lastmod: doc.en.meta?.modifiedAt ?? publishedAt,
+      },
     ]),
   ];
 
@@ -554,9 +582,9 @@ async function buildSitemap() {
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ...urls.map(
-      ({ loc, priority, changefreq }) => `<url>
+      ({ loc, priority, changefreq, lastmod }) => `<url>
 <loc>${loc}</loc>
-<lastmod>${publishedAt}</lastmod>
+<lastmod>${lastmod}</lastmod>
 <changefreq>${changefreq}</changefreq>
 <priority>${priority}</priority>
 </url>`,

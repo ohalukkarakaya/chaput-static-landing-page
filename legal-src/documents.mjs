@@ -8,6 +8,12 @@ const taxNo = "4060723540";
 const contactPerson = "Özgür Haluk Karakaya";
 const controllerRole = "veri sorumlusu";
 const controllerRoleEn = "data controller";
+const storeCompany = "GOKTIGIN BILISIM TEKNOLOJI LIMITED SIRKETI";
+const childSafetyEmail = "child-safety@goktigin.com";
+const childSafetyMetaTitle =
+  "Child Safety Standards and Children’s Privacy Notice | Chaput";
+const childSafetyMetaDescription =
+  "Chaput’s child safety standards, CSAE/CSAM policy, reporting mechanisms, moderation rules, and children’s privacy notice.";
 
 export const site = {
   brand: "Chaput",
@@ -771,37 +777,265 @@ export const docs = [
   {
     slug: "children",
     tr: {
-      title: "Çocukların Gizliliği Bildirimi",
+      title: "Çocuk Güvenliği Standartları ve Çocukların Gizliliği Bildirimi",
       description:
-        "Chaput'un yaş sınırı, çocukların verilerinin korunması ve ebeveyn/veli başvuru süreçleri.",
+        "Chaput'un çocuk güvenliği standartları, CSAE/CSAM yasağı, raporlama mekanizmaları, moderasyon kuralları ve çocukların gizliliği ilkeleri.",
       summary:
-        "Chaput genel kullanım için 15 yaş altındaki çocuklara yönelik tasarlanmamıştır.",
+        "Bu sayfa, Chaput’un uygulama mağazası incelemeleri, kullanıcı güvenliği ve yasal uyum amacıyla yayımladığı Çocuk Güvenliği Standartları ve Çocukların Gizliliği Bildirimi’dir.",
+      meta: {
+        metaTitle: childSafetyMetaTitle,
+        metaDescription: childSafetyMetaDescription,
+        effectiveDate: "20.05.2026",
+        updatedDate: "06.07.2026",
+        publishedAt: "2026-05-20",
+        modifiedAt: "2026-07-06",
+      },
       blocks: [
-        `<h2>1. Yaş Sınırı</h2>
-        <p>Chaput, hesap oluşturma süreçlerinde doğum tarihi doğrulama mekanizmaları üzerinden asgari yaş kontrolleri uygulayabilir. Geçerli minimum yaş şartını sağlamayan kullanıcıların hesap oluşturması veya hesap işlemlerini tamamlaması engellenebilir. Yerel hukukun daha yüksek bir yaş sınırı öngördüğü durumlarda ilgili yasal yaş sınırı uygulanır.</p>`,
+        `<p><strong>App:</strong> Chaput<br><strong>Developer / Company:</strong> ${storeCompany}<br><strong>General contact:</strong> <a href="mailto:${email}">${email}</a><br><strong>Child safety contact:</strong> <a href="mailto:${childSafetyEmail}">${childSafetyEmail}</a></p>`,
 
-        `<h2>2. Bilerek Veri Toplamama İlkesi</h2>
-        <p>15 yaş altındaki çocuklardan bilerek kişisel veri toplamayı amaçlamıyoruz. Böyle bir hesabın oluşturulduğunu, yanlış yaş beyanı verildiğini veya çocuk güvenliğini tehlikeye atan bir kullanım bulunduğunu öğrenirsek hesabı askıya alabilir, silebilir ve gerekli güvenlik adımlarını atabiliriz.</p>`,
+        `<h2>1. Kapsam</h2>
+        <p>Chaput, kullanıcıların sosyal etkileşim kurabildiği, profil oluşturabildiği ve kullanıcı tarafından oluşturulan içerik paylaşabildiği bir mobil uygulamadır. Bu sayfa; Chaput uygulamasının çocuk güvenliği standartlarını, çocukların gizliliğine ilişkin yaklaşımını ve kullanıcı güvenliğine dair temel moderasyon çerçevesini açıklar.</p>
+        <p>Chaput, 15 yaş altındaki çocuklara yönelik tasarlanmamıştır. Yerel hukuk daha yüksek bir asgari yaş sınırı öngörüyorsa, ilgili daha yüksek yaş sınırı uygulanır. Hesap oluşturma veya kullanımın belirli aşamalarında yaş kapısı, doğum tarihi beyanı veya ek doğrulama kontrolleri uygulanabilir.</p>
+        <p>Bu sayfa, Chaput’un uygulama mağazası incelemeleri, kullanıcı güvenliği ve yasal uyum amacıyla yayımladığı Çocuk Güvenliği Standartları ve Çocukların Gizliliği Bildirimi’dir.</p>`,
 
-        `<h2>3. Ebeveyn veya Veli Başvuruları</h2>
-        <p>Bir ebeveyn veya yasal veli, çocuğa ait verilerin sistemlerimizde işlendiğini düşünüyorsa ${email} üzerinden bizimle iletişime geçebilir. Doğrulama sonrasında hesap kaldırma veya veri inceleme süreçleri yürütülebilir.</p>`,
+        `<h2>2. Çocukların Cinsel İstismarı ve Sömürüsüne Karşı Sıfır Tolerans</h2>
+        <p>Chaput, çocukların cinsel istismarı ve sömürüsüne (CSAE) ve çocuk cinsel istismar materyaline (CSAM) karşı sıfır tolerans politikası uygular.</p>
+        <p>Buna; çocuk cinsel istismar materyali (CSAM), grooming, sextortion, reşit olmayanların cinselleştirilmesi (sexualization of minors), çocuğun cinsel amaçlarla ticareti veya yönlendirilmesi (trafficking of a child for sexual purposes) ve CSAM elde etmeye, istemeye, paylaşmaya, depolamaya veya dağıtmaya yönelik her türlü girişim dahildir. Attempts to solicit, obtain, share, store, or distribute CSAM kesin olarak yasaktır.</p>`,
+
+        `<h2>3. Yasaklı İçerik ve Davranışlar</h2>
+        <p>Aşağıdaki içerik ve davranışlara Chaput üzerinde izin verilmez:</p>
+        <ul>
+          <li>Reşit olmayanların cinsel içerikli tasviri, ima edilmesi veya cinselleştirilmesi.</li>
+          <li>Reşit olmayanlardan cinsel içerik isteme, toplama veya buna teşvik etme.</li>
+          <li>Grooming, sextortion, cinsel amaçlı manipülasyon, tehdit, şantaj veya yönlendirme.</li>
+          <li>Çocuklara yönelik cinsel amaçlı yaklaşım kurma veya platform dışı iletişime yönlendirme girişimleri.</li>
+          <li>CSAM paylaşma, yükleme, bağlantı verme, depolama, yayma veya buna teşebbüs etme.</li>
+          <li>Yapay zeka ile üretilmiş olsa bile reşit olmayanları cinsel bağlamda gösteren içerikler.</li>
+          <li>Yaşını yanlış beyan ederek çocuk güvenliği önlemlerini aşmaya çalışma.</li>
+          <li>Çocuklara yönelik zararlı, istismarcı veya sömürücü temas kurma girişimleri.</li>
+        </ul>`,
+
+        `<h2>4. Kullanıcı Raporlama Mekanizmaları</h2>
+        <p>Kullanıcılar uygulama içinden kullanıcı, profil, mesaj veya diğer içerikleri raporlayabilir. Ayrıca çocuk güvenliği, CSAE veya CSAM ile ilgili bildirimler <a href="mailto:${childSafetyEmail}">${childSafetyEmail}</a> adresine gönderilebilir.</p>
+        <p>Acil veya yakın risk durumlarında, kullanıcıların gecikmeksizin yerel kolluk kuvvetlerine veya ilgili acil yardım mekanizmalarına başvurması gerekir. Çocuk güvenliği bildirimleri yüksek öncelikli olarak ele alınır ve diğer raporlara göre önceliklendirilebilir.</p>`,
+
+        `<h2>5. Moderasyon, İnceleme ve Yaptırımlar</h2>
+        <p>Raporlanan içerikler ve davranışlar otomatik sinyaller, insan incelemesi veya her ikisinin birlikte kullanılmasıyla değerlendirilebilir. İhlal tespit edilmesi halinde ilgili içerik kaldırılabilir, görünürlüğü sınırlandırılabilir, hesap askıya alınabilir veya kalıcı olarak kapatılabilir.</p>
+        <p>CSAM tespit edildiğinde içerik derhal erişimden kaldırılır veya engellenir. Delil niteliğindeki kayıtlar yalnızca hukuka uygun şekilde ve gerekli olduğu ölçüde saklanabilir. Tekrarlayan veya ağır ihlaller kalıcı yasak sebebidir. Ciddi durumlarda ilgili bilgiler hukuka uygun çerçevede yetkili makamlara bildirilebilir.</p>`,
+
+        `<h2>6. Apple UGC Güvenlik Kapsamı</h2>
+        <p>Chaput, kullanıcı tarafından oluşturulan içerik içeren bir hizmet olarak aşağıdaki güvenlik önlemlerini uygular veya uygulamayı hedefler:</p>
+        <ul>
+          <li>Sakıncalı içerik filtreleme, moderasyon ve ihlal incelemesi.</li>
+          <li>Hakaret içeren, istismarcı veya sakıncalı içerikler için kullanıcı raporlama araçları.</li>
+          <li>Makul süre içinde değerlendirme ve uygun aksiyon alma süreçleri.</li>
+          <li>Kötüye kullanan kullanıcıları engelleme, kısıtlama veya yasaklama mekanizmaları.</li>
+          <li>Yayınlanmış iletişim bilgileri ve güvenlik başvuru kanalları.</li>
+        </ul>`,
+
+        `<h2>7. Çocukların Gizliliği</h2>
+        <p>Chaput, 15 yaş altındaki çocuklara yönelik değildir ve 15 yaş altından bilerek kişisel veri toplamayı amaçlamaz. Yanlış yaş beyanı, yaş kapısını aşma girişimi veya çocuk hesabı şüphesi tespit edilirse ilgili hesap askıya alınabilir veya silinebilir.</p>
+        <p>Ebeveynler veya yasal veliler, çocuklara ilişkin başvurular için <a href="mailto:${email}">${email}</a> üzerinden bizimle iletişime geçebilir. Çocuk verilerine ilişkin başvurular öncelikli olarak değerlendirilebilir. Veri minimizasyonu, güvenlik ve gerekli olmayan çocuk verisinin işlenmemesi temel ilkelerimiz arasındadır.</p>
+        <p>Türkiye bakımından, kişisel veriler 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında hukuka uygun, belirli, açık ve meşru amaçlarla, işlendikleri amaçla bağlantılı, sınırlı ve ölçülü şekilde ve gerektiği süre kadar işlenir.</p>`,
+
+        `<h2>8. Türkiye Hukukuna Uyum</h2>
+        <p>Chaput, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), 5651 sayılı Kanun ve uygulanabilir diğer mevzuata uyum sağlamak için makul teknik ve idari tedbirleri uygular. Hukuka aykırı içerik bildirildiğinde, uygulanabilir hukuk çerçevesinde içeriğin kaldırılması, erişimin engellenmesi, hesap yaptırımı ve yetkili makamlarla iş birliği adımları atılabilir.</p>
+        <p>Yetkili makam talepleri hukuka uygunluk bakımından değerlendirilir ve gerekli görüldüğünde uygun kayıt saklama, inceleme ve bildirim süreçleri işletilir.</p>`,
+
+        `<h2>9. İletişim</h2>
+        <p><strong>Genel gizlilik / destek:</strong><br><a href="mailto:${email}">${email}</a></p>
+        <p><strong>Çocuk güvenliği / CSAE / CSAM bildirimleri:</strong><br><a href="mailto:${childSafetyEmail}">${childSafetyEmail}</a></p>
+        <p><strong>Geliştirici:</strong><br>${storeCompany}</p>
+        <p><strong>Uygulama:</strong><br>Chaput</p>`,
+
+        `<hr>
+        <h2 lang="en">English Version</h2>
+        <p lang="en"><strong>App:</strong> Chaput<br><strong>Developer / Company:</strong> ${storeCompany}<br><strong>General contact:</strong> <a href="mailto:${email}">${email}</a><br><strong>Child safety contact:</strong> <a href="mailto:${childSafetyEmail}">${childSafetyEmail}</a></p>
+
+        <h2 lang="en">1. Scope</h2>
+        <p lang="en">Chaput is a mobile application that enables social interaction and user generated content. This page explains Chaput’s child safety standards, children’s privacy approach, and core moderation framework for user safety.</p>
+        <p lang="en">Chaput is not designed for children under 15. If local law imposes a higher minimum age, the higher legal threshold applies. Age gates, date of birth declarations, or additional verification controls may be used during account creation or use.</p>
+        <p lang="en">This page is Chaput’s publicly available Child Safety Standards and Children’s Privacy Notice for app store review, user safety, and legal compliance purposes.</p>
+
+        <h2 lang="en">2. Zero Tolerance for CSAE and CSAM</h2>
+        <p lang="en">Chaput has zero tolerance for Child Sexual Abuse and Exploitation (CSAE) and Child Sexual Abuse Material (CSAM).</p>
+        <p lang="en">This includes CSAM, grooming, sextortion, sexualization of minors, trafficking of a child for sexual purposes, and attempts to solicit, obtain, share, store, or distribute CSAM.</p>
+
+        <h2 lang="en">3. Prohibited Content and Conduct</h2>
+        <p lang="en">The following content and conduct are prohibited on Chaput:</p>
+        <ul lang="en">
+          <li>Sexual depiction, suggestion, or sexualization of minors.</li>
+          <li>Soliciting sexual content from minors.</li>
+          <li>Grooming, sextortion, sexual coercion, threats, blackmail, or manipulative conduct targeting minors.</li>
+          <li>Sharing, uploading, linking to, storing, distributing, or attempting to distribute CSAM.</li>
+          <li>AI-generated content that sexually depicts minors or places minors in sexual contexts.</li>
+          <li>Misrepresenting age to evade child safety measures.</li>
+          <li>Attempting to move minors to off-platform communication or establish harmful or exploitative contact.</li>
+        </ul>
+
+        <h2 lang="en">4. Reporting Mechanisms</h2>
+        <p lang="en">Users can report users, profiles, messages, or content through in-app reporting tools. Child safety, CSAE, or CSAM reports may also be submitted to <a href="mailto:${childSafetyEmail}">${childSafetyEmail}</a>.</p>
+        <p lang="en">Where there is an immediate or urgent risk, users should contact local law enforcement or emergency services. Child safety reports are handled with elevated priority.</p>
+
+        <h2 lang="en">5. Moderation, Review and Enforcement</h2>
+        <p lang="en">Reported content is reviewed using automated signals, human moderation, or both. If a violation is found, content may be removed, access may be restricted, and the relevant account may be suspended or permanently terminated.</p>
+        <p lang="en">When CSAM is identified, the content is removed from access or blocked without delay. Evidentiary records may be retained only where lawful and necessary. Repeated or severe violations may result in permanent bans. In serious cases, information may be reported to competent authorities as permitted or required by law.</p>
+
+        <h2 lang="en">6. Apple UGC Safety Coverage</h2>
+        <p lang="en">As a service with user generated content, Chaput provides or intends to provide the following safety measures:</p>
+        <ul lang="en">
+          <li>Objectionable content filtering and moderation.</li>
+          <li>Offensive content reporting tools.</li>
+          <li>Timely response to concerns and safety complaints.</li>
+          <li>Blocking abusive users and applying account restrictions or bans where needed.</li>
+          <li>Published contact information for safety and privacy matters.</li>
+        </ul>
+
+        <h2 lang="en">7. Child Privacy</h2>
+        <p lang="en">Chaput is not directed to children under 15 and does not knowingly seek to collect personal data from children under 15. If a false age declaration, child account, or attempt to bypass age requirements is identified, the account may be suspended or deleted.</p>
+        <p lang="en">Parents or legal guardians may contact us at <a href="mailto:${email}">${email}</a> regarding child data concerns. Child data requests may receive priority review. Data minimization, security, and avoiding unnecessary processing of child data are core principles.</p>
+        <p lang="en">For users in Türkiye, personal data is processed in accordance with Law No. 6698 on the Protection of Personal Data on lawful, specific, explicit, and legitimate grounds, in a manner that is relevant, limited, proportionate, and retained only as long as necessary.</p>
+
+        <h2 lang="en">8. Compliance with Turkish Law</h2>
+        <p lang="en">Chaput applies reasonable technical and administrative measures to support compliance with Law No. 6698 on the Protection of Personal Data, Law No. 5651, and other applicable legislation. Where unlawful content is reported, content removal, access restriction, account sanctions, and cooperation with competent authorities may occur as required by applicable law.</p>
+        <p lang="en">Requests from competent authorities are evaluated for legal validity and handled through appropriate review, preservation, and response processes.</p>
+
+        <h2 lang="en">9. Contact</h2>
+        <p lang="en"><strong>General privacy / support:</strong><br><a href="mailto:${email}">${email}</a></p>
+        <p lang="en"><strong>Child safety / CSAE / CSAM reports:</strong><br><a href="mailto:${childSafetyEmail}">${childSafetyEmail}</a></p>
+        <p lang="en"><strong>Developer:</strong><br>${storeCompany}</p>
+        <p lang="en"><strong>App:</strong><br>Chaput</p>`,
       ],
     },
     en: {
-      title: "Children's Privacy Notice",
+      title: "Child Safety Standards and Children’s Privacy Notice",
       description:
-        "Chaput's age threshold, child data handling principles, and parent or guardian request process.",
+        "Chaput's child safety standards, CSAE/CSAM policy, reporting mechanisms, moderation rules, and children’s privacy principles.",
       summary:
-        "Chaput is not designed for general use by children under 15.",
+        "This page is Chaput’s publicly available Child Safety Standards and Children’s Privacy Notice for app store review, user safety, and legal compliance purposes.",
+      meta: {
+        metaTitle: childSafetyMetaTitle,
+        metaDescription: childSafetyMetaDescription,
+        effectiveDate: "20 May 2026",
+        updatedDate: "06 July 2026",
+        publishedAt: "2026-05-20",
+        modifiedAt: "2026-07-06",
+      },
       blocks: [
-        `<h2>1. Age Threshold</h2>
-        <p>Chaput may apply minimum age requirements during account creation through date of birth verification mechanisms. Users who do not meet the applicable minimum age requirement may be prevented from creating or completing an account. Where local law requires a higher minimum age threshold, the applicable legal requirement shall prevail.</p>`,
+        `<p><strong>App:</strong> Chaput<br><strong>Developer / Company:</strong> ${storeCompany}<br><strong>General contact:</strong> <a href="mailto:${email}">${email}</a><br><strong>Child safety contact:</strong> <a href="mailto:${childSafetyEmail}">${childSafetyEmail}</a></p>`,
 
-        `<h2>2. No Knowing Collection from Children Under 15</h2>
-        <p>We do not intend to knowingly collect personal data from children under 15. If we learn that such an account has been created, that an age has been misstated, or that child safety is at risk, we may suspend or delete the account and take necessary safety steps.</p>`,
+        `<h2>1. Scope</h2>
+        <p>Chaput is a mobile application that enables social interaction and user generated content. This page explains Chaput’s child safety standards, children’s privacy approach, and core moderation framework for user safety.</p>
+        <p>Chaput is not designed for children under 15. If local law imposes a higher minimum age, the higher legal threshold applies. Age gates, date of birth declarations, or additional verification controls may be used during account creation or use.</p>
+        <p>This page is Chaput’s publicly available Child Safety Standards and Children’s Privacy Notice for app store review, user safety, and legal compliance purposes.</p>`,
 
-        `<h2>3. Parent or Guardian Requests</h2>
-        <p>If a parent or legal guardian believes that a child's data is being processed in our systems, they may contact us at ${email}. After verification, we may review the account and proceed with removal or related data-handling measures.</p>`,
+        `<h2>2. Zero Tolerance for CSAE and CSAM</h2>
+        <p>Chaput has zero tolerance for Child Sexual Abuse and Exploitation (CSAE) and Child Sexual Abuse Material (CSAM).</p>
+        <p>This includes CSAM, grooming, sextortion, sexualization of minors, trafficking of a child for sexual purposes, and attempts to solicit, obtain, share, store, or distribute CSAM.</p>`,
+
+        `<h2>3. Prohibited Content and Conduct</h2>
+        <p>The following content and conduct are prohibited on Chaput:</p>
+        <ul>
+          <li>Sexual depiction, suggestion, or sexualization of minors.</li>
+          <li>Soliciting sexual content from minors.</li>
+          <li>Grooming, sextortion, sexual coercion, threats, blackmail, or manipulative conduct targeting minors.</li>
+          <li>Sharing, uploading, linking to, storing, distributing, or attempting to distribute CSAM.</li>
+          <li>AI-generated content that sexually depicts minors or places minors in sexual contexts.</li>
+          <li>Misrepresenting age to evade child safety measures.</li>
+          <li>Attempting to move minors to off-platform communication or establish harmful or exploitative contact.</li>
+        </ul>`,
+
+        `<h2>4. Reporting Mechanisms</h2>
+        <p>Users can report users, profiles, messages, or content through in-app reporting tools. Child safety, CSAE, or CSAM reports may also be submitted to <a href="mailto:${childSafetyEmail}">${childSafetyEmail}</a>.</p>
+        <p>Where there is an immediate or urgent risk, users should contact local law enforcement or emergency services. Child safety reports are handled with elevated priority.</p>`,
+
+        `<h2>5. Moderation, Review and Enforcement</h2>
+        <p>Reported content is reviewed using automated signals, human moderation, or both. If a violation is found, content may be removed, access may be restricted, and the relevant account may be suspended or permanently terminated.</p>
+        <p>When CSAM is identified, the content is removed from access or blocked without delay. Evidentiary records may be retained only where lawful and necessary. Repeated or severe violations may result in permanent bans. In serious cases, information may be reported to competent authorities as permitted or required by law.</p>`,
+
+        `<h2>6. Apple UGC Safety Coverage</h2>
+        <p>As a service with user generated content, Chaput provides or intends to provide the following safety measures:</p>
+        <ul>
+          <li>Objectionable content filtering and moderation.</li>
+          <li>Offensive content reporting tools.</li>
+          <li>Timely response to concerns and safety complaints.</li>
+          <li>Blocking abusive users and applying account restrictions or bans where needed.</li>
+          <li>Published contact information for safety and privacy matters.</li>
+        </ul>`,
+
+        `<h2>7. Child Privacy</h2>
+        <p>Chaput is not directed to children under 15 and does not knowingly seek to collect personal data from children under 15. If a false age declaration, child account, or attempt to bypass age requirements is identified, the account may be suspended or deleted.</p>
+        <p>Parents or legal guardians may contact us at <a href="mailto:${email}">${email}</a> regarding child data concerns. Child data requests may receive priority review. Data minimization, security, and avoiding unnecessary processing of child data are core principles.</p>
+        <p>For users in Türkiye, personal data is processed in accordance with Law No. 6698 on the Protection of Personal Data on lawful, specific, explicit, and legitimate grounds, in a manner that is relevant, limited, proportionate, and retained only as long as necessary.</p>`,
+
+        `<h2>8. Compliance with Turkish Law</h2>
+        <p>Chaput applies reasonable technical and administrative measures to support compliance with Law No. 6698 on the Protection of Personal Data, Law No. 5651, and other applicable legislation. Where unlawful content is reported, content removal, access restriction, account sanctions, and cooperation with competent authorities may occur as required by applicable law.</p>
+        <p>Requests from competent authorities are evaluated for legal validity and handled through appropriate review, preservation, and response processes.</p>`,
+
+        `<h2>9. Contact</h2>
+        <p><strong>General privacy / support:</strong><br><a href="mailto:${email}">${email}</a></p>
+        <p><strong>Child safety / CSAE / CSAM reports:</strong><br><a href="mailto:${childSafetyEmail}">${childSafetyEmail}</a></p>
+        <p><strong>Developer:</strong><br>${storeCompany}</p>
+        <p><strong>App:</strong><br>Chaput</p>`,
+
+        `<hr>
+        <h2 lang="tr">Türkçe Metin</h2>
+        <p lang="tr"><strong>Uygulama:</strong> Chaput<br><strong>Geliştirici / Şirket:</strong> ${storeCompany}<br><strong>Genel iletişim:</strong> <a href="mailto:${email}">${email}</a><br><strong>Çocuk güvenliği iletişimi:</strong> <a href="mailto:${childSafetyEmail}">${childSafetyEmail}</a></p>
+
+        <h2 lang="tr">1. Kapsam</h2>
+        <p lang="tr">Chaput, kullanıcıların sosyal etkileşim kurabildiği, profil oluşturabildiği ve kullanıcı tarafından oluşturulan içerik paylaşabildiği bir mobil uygulamadır. Bu sayfa; Chaput uygulamasının çocuk güvenliği standartlarını, çocukların gizliliğine ilişkin yaklaşımını ve kullanıcı güvenliğine dair temel moderasyon çerçevesini açıklar.</p>
+        <p lang="tr">Chaput, 15 yaş altındaki çocuklara yönelik tasarlanmamıştır. Yerel hukuk daha yüksek bir asgari yaş sınırı öngörüyorsa, ilgili daha yüksek yaş sınırı uygulanır. Hesap oluşturma veya kullanımın belirli aşamalarında yaş kapısı, doğum tarihi beyanı veya ek doğrulama kontrolleri uygulanabilir.</p>
+        <p lang="tr">Bu sayfa, Chaput’un uygulama mağazası incelemeleri, kullanıcı güvenliği ve yasal uyum amacıyla yayımladığı Çocuk Güvenliği Standartları ve Çocukların Gizliliği Bildirimi’dir.</p>
+
+        <h2 lang="tr">2. Çocukların Cinsel İstismarı ve Sömürüsüne Karşı Sıfır Tolerans</h2>
+        <p lang="tr">Chaput, çocukların cinsel istismarı ve sömürüsüne (CSAE) ve çocuk cinsel istismar materyaline (CSAM) karşı sıfır tolerans politikası uygular.</p>
+        <p lang="tr">Buna; çocuk cinsel istismar materyali (CSAM), grooming, sextortion, reşit olmayanların cinselleştirilmesi (sexualization of minors), çocuğun cinsel amaçlarla ticareti veya yönlendirilmesi (trafficking of a child for sexual purposes) ve CSAM elde etmeye, istemeye, paylaşmaya, depolamaya veya dağıtmaya yönelik her türlü girişim dahildir. Attempts to solicit, obtain, share, store, or distribute CSAM kesin olarak yasaktır.</p>
+
+        <h2 lang="tr">3. Yasaklı İçerik ve Davranışlar</h2>
+        <p lang="tr">Aşağıdaki içerik ve davranışlara Chaput üzerinde izin verilmez:</p>
+        <ul lang="tr">
+          <li>Reşit olmayanların cinsel içerikli tasviri, ima edilmesi veya cinselleştirilmesi.</li>
+          <li>Reşit olmayanlardan cinsel içerik isteme, toplama veya buna teşvik etme.</li>
+          <li>Grooming, sextortion, cinsel amaçlı manipülasyon, tehdit, şantaj veya yönlendirme.</li>
+          <li>Çocuklara yönelik cinsel amaçlı yaklaşım kurma veya platform dışı iletişime yönlendirme girişimleri.</li>
+          <li>CSAM paylaşma, yükleme, bağlantı verme, depolama, yayma veya buna teşebbüs etme.</li>
+          <li>Yapay zeka ile üretilmiş olsa bile reşit olmayanları cinsel bağlamda gösteren içerikler.</li>
+          <li>Yaşını yanlış beyan ederek çocuk güvenliği önlemlerini aşmaya çalışma.</li>
+          <li>Çocuklara yönelik zararlı, istismarcı veya sömürücü temas kurma girişimleri.</li>
+        </ul>
+
+        <h2 lang="tr">4. Kullanıcı Raporlama Mekanizmaları</h2>
+        <p lang="tr">Kullanıcılar uygulama içinden kullanıcı, profil, mesaj veya diğer içerikleri raporlayabilir. Ayrıca çocuk güvenliği, CSAE veya CSAM ile ilgili bildirimler <a href="mailto:${childSafetyEmail}">${childSafetyEmail}</a> adresine gönderilebilir.</p>
+        <p lang="tr">Acil veya yakın risk durumlarında, kullanıcıların gecikmeksizin yerel kolluk kuvvetlerine veya ilgili acil yardım mekanizmalarına başvurması gerekir. Çocuk güvenliği bildirimleri yüksek öncelikli olarak ele alınır ve diğer raporlara göre önceliklendirilebilir.</p>
+
+        <h2 lang="tr">5. Moderasyon, İnceleme ve Yaptırımlar</h2>
+        <p lang="tr">Raporlanan içerikler ve davranışlar otomatik sinyaller, insan incelemesi veya her ikisinin birlikte kullanılmasıyla değerlendirilebilir. İhlal tespit edilmesi halinde ilgili içerik kaldırılabilir, görünürlüğü sınırlandırılabilir, hesap askıya alınabilir veya kalıcı olarak kapatılabilir.</p>
+        <p lang="tr">CSAM tespit edildiğinde içerik derhal erişimden kaldırılır veya engellenir. Delil niteliğindeki kayıtlar yalnızca hukuka uygun şekilde ve gerekli olduğu ölçüde saklanabilir. Tekrarlayan veya ağır ihlaller kalıcı yasak sebebidir. Ciddi durumlarda ilgili bilgiler hukuka uygun çerçevede yetkili makamlara bildirilebilir.</p>
+
+        <h2 lang="tr">6. Apple UGC Güvenlik Kapsamı</h2>
+        <p lang="tr">Chaput, kullanıcı tarafından oluşturulan içerik içeren bir hizmet olarak aşağıdaki güvenlik önlemlerini uygular veya uygulamayı hedefler:</p>
+        <ul lang="tr">
+          <li>Sakıncalı içerik filtreleme, moderasyon ve ihlal incelemesi.</li>
+          <li>Hakaret içeren, istismarcı veya sakıncalı içerikler için kullanıcı raporlama araçları.</li>
+          <li>Makul süre içinde değerlendirme ve uygun aksiyon alma süreçleri.</li>
+          <li>Kötüye kullanan kullanıcıları engelleme, kısıtlama veya yasaklama mekanizmaları.</li>
+          <li>Yayınlanmış iletişim bilgileri ve güvenlik başvuru kanalları.</li>
+        </ul>
+
+        <h2 lang="tr">7. Çocukların Gizliliği</h2>
+        <p lang="tr">Chaput, 15 yaş altındaki çocuklara yönelik değildir ve 15 yaş altından bilerek kişisel veri toplamayı amaçlamaz. Yanlış yaş beyanı, yaş kapısını aşma girişimi veya çocuk hesabı şüphesi tespit edilirse ilgili hesap askıya alınabilir veya silinebilir.</p>
+        <p lang="tr">Ebeveynler veya yasal veliler, çocuklara ilişkin başvurular için <a href="mailto:${email}">${email}</a> üzerinden bizimle iletişime geçebilir. Çocuk verilerine ilişkin başvurular öncelikli olarak değerlendirilebilir. Veri minimizasyonu, güvenlik ve gerekli olmayan çocuk verisinin işlenmemesi temel ilkelerimiz arasındadır.</p>
+        <p lang="tr">Türkiye bakımından, kişisel veriler 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında hukuka uygun, belirli, açık ve meşru amaçlarla, işlendikleri amaçla bağlantılı, sınırlı ve ölçülü şekilde ve gerektiği süre kadar işlenir.</p>
+
+        <h2 lang="tr">8. Türkiye Hukukuna Uyum</h2>
+        <p lang="tr">Chaput, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), 5651 sayılı Kanun ve uygulanabilir diğer mevzuata uyum sağlamak için makul teknik ve idari tedbirleri uygular. Hukuka aykırı içerik bildirildiğinde, uygulanabilir hukuk çerçevesinde içeriğin kaldırılması, erişimin engellenmesi, hesap yaptırımı ve yetkili makamlarla iş birliği adımları atılabilir.</p>
+        <p lang="tr">Yetkili makam talepleri hukuka uygunluk bakımından değerlendirilir ve gerekli görüldüğünde uygun kayıt saklama, inceleme ve bildirim süreçleri işletilir.</p>
+
+        <h2 lang="tr">9. İletişim</h2>
+        <p lang="tr"><strong>Genel gizlilik / destek:</strong><br><a href="mailto:${email}">${email}</a></p>
+        <p lang="tr"><strong>Çocuk güvenliği / CSAE / CSAM bildirimleri:</strong><br><a href="mailto:${childSafetyEmail}">${childSafetyEmail}</a></p>
+        <p lang="tr"><strong>Geliştirici:</strong><br>${storeCompany}</p>
+        <p lang="tr"><strong>Uygulama:</strong><br>Chaput</p>`,
       ],
     },
   },
