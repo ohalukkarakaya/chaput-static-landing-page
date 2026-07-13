@@ -84,6 +84,98 @@
 <script defer src="/assets/app.bundle.js">
 </script>
 <link href="/assets/app.css" rel="stylesheet">
+<style>
+.ios-install-sheet[hidden] {
+  display: none !important;
+}
+
+.ios-install-sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 1400;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(10, 10, 12, 0.18);
+  backdrop-filter: blur(8px);
+}
+
+.ios-install-sheet__panel {
+  width: min(560px, 100%);
+  border-radius: 28px;
+  border: 1px solid rgba(17, 16, 62, 0.08);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 24px 60px rgba(17, 16, 62, 0.18);
+  padding: 14px 16px 16px;
+}
+
+.ios-install-sheet__handle {
+  width: 52px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(17, 16, 62, 0.16);
+  margin: 0 auto 14px;
+}
+
+.ios-install-sheet__title {
+  margin: 0 0 8px;
+  font-size: 26px;
+  line-height: 1.1;
+}
+
+.ios-install-sheet__text {
+  margin: 0;
+  color: #4b4b60;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ios-install-sheet__actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.ios-install-sheet__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  border-radius: 18px;
+  font-family: 'Qanelas', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ios-install-sheet__button--primary {
+  background: #050505;
+  color: #fff !important;
+}
+
+.ios-install-sheet__button--secondary {
+  border: 1px solid rgba(17, 16, 62, 0.08);
+  background: rgba(17, 16, 62, 0.04);
+  color: #1f2230 !important;
+}
+
+@media (max-width: 768px) {
+  .ios-install-sheet {
+    padding: 12px;
+  }
+
+  .ios-install-sheet__panel {
+    border-radius: 24px;
+    padding: 12px 14px 14px;
+  }
+
+  .ios-install-sheet__title {
+    font-size: 24px;
+  }
+}
+</style>
 </head>
 <body>
 <main>
@@ -95,14 +187,14 @@
 <p class="app__description darkmode-ignore" data-i18n="tagline">Mesajlaşmayı seyircili bir spora dönüştürdük.</p>
 <div class="app__buttons app__buttons--desktop"> <a href="https://play.google.com/store/apps/details?id=com.goktigin.chaput" class="app__button-play" data-store-target="android" target="_blank" rel="noopener noreferrer">
 <img src="/assets/images/google-play-badge.png" alt="Get on Google Play">
-</a> <a href="https://apps.apple.com/us/search?term=com.goktigin.chaput" class="app__button-ios" data-store-target="ios" target="_blank" rel="noopener noreferrer">
+</a> <a href="https://apps.apple.com/us/app/chaput/id6777180189" class="app__button-ios" data-store-target="ios" target="_blank" rel="noopener noreferrer">
 <img src="/assets/images/ios.svg" alt="Get on Appstore">
 </a>
 </div>
 </div> </header>
 <div class="app__buttons app__buttons--mobile container"> <a href="https://play.google.com/store/apps/details?id=com.goktigin.chaput" class="app__button-play" data-store-target="android" target="_blank" rel="noopener noreferrer">
 <img src="/assets/images/google-play-badge.png" alt="Get on Google Play">
-</a> <a href="https://apps.apple.com/us/search?term=com.goktigin.chaput" class="app__button-ios" data-store-target="ios" target="_blank" rel="noopener noreferrer">
+</a> <a href="https://apps.apple.com/us/app/chaput/id6777180189" class="app__button-ios" data-store-target="ios" target="_blank" rel="noopener noreferrer">
 <img src="/assets/images/ios.svg" alt="Get on Appstore">
 </a>
 </div> <section class="app__screenshots app__section">
@@ -162,7 +254,18 @@
 </div>
 </div> </footer>
 <script>(function(){var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();var isTr=lang.indexOf('tr')===0;var locale=isTr?'tr':'en';var dict={en:{tagline:'We turned messaging into a spectator sport.',screenshots_title:'Screenshots',description_title:'Description',description_lead:'We transform the traditional chaput tying ritual into a modern, participatory communication experience.',info_badge:'Social Platform',label_tree:'kayin tree',label_visibility:'Visibility',label_types:'Chaput Types',label_whisper:'Whisper',value_tree:'Each user has a profile tree. Chaputs are tied to specific points and conversations start there.',value_visibility:'If your profile is public, chaputs can be read and liked by everyone. If private, only followers can view.',value_types:'Normal chaputs are public. In secret chaputs, the message is visible but only the tree owner knows the sender. Special chaputs are highlighted for 24 hours.',value_whisper:'Whispers allow messages visible only to the participants of the conversation.',footer_love:'© 2026 Chaput. Built by Goktigin.',legal_link:'Legal',privacy_link:'Privacy Policy',terms_link:'Terms of Service',kvkk_link:'KVKK Notice'}};if(locale==='en'){document.querySelectorAll('[data-i18n]').forEach(function(el){var key=el.getAttribute('data-i18n');if(dict.en[key]){el.textContent=dict.en[key];}});}document.querySelectorAll('[data-src-tr]').forEach(function(el){var src=el.getAttribute(locale==='tr'?'data-src-tr':'data-src-en');if(!src){return;}if(el.tagName==='A'){el.setAttribute('href',src);}else{el.setAttribute('src',src);}});})();</script>
-<script>(function(){var host=(window.location.hostname||'').toLowerCase();var analyticsOrigin='';if(host==='chaput.app'||host==='www.chaput.app'){analyticsOrigin='https://api.chaput.app';}else if(host==='test.chaput.app'||host==='www.test.chaput.app'){analyticsOrigin='https://test-api.chaput.app';}if(!analyticsOrigin){return;}var params=new URLSearchParams(window.location.search);var utmSource=(params.get('utm_source')||'').trim().toLowerCase();var explicitSource=(params.get('source')||utmSource).trim().toLowerCase();var referrerHost='';try{if(document.referrer){referrerHost=(new URL(document.referrer)).hostname.toLowerCase();if(referrerHost.indexOf('www.')===0){referrerHost=referrerHost.slice(4);}}}catch(_){referrerHost='';}var ua=(navigator.userAgent||'').toLowerCase();function detectSource(){var raw=explicitSource||referrerHost;if(raw){if(raw.indexOf('youtube')!==-1||raw==='yt'){return 'youtube';}if(raw.indexOf('instagram')!==-1||raw==='ig'){return 'instagram';}if(raw.indexOf('tiktok')!==-1||raw==='tt'||raw.indexOf('bytedance')!==-1){return 'tiktok';}}if(ua.indexOf('youtube')!==-1){return 'youtube';}if(ua.indexOf('instagram')!==-1){return 'instagram';}if(ua.indexOf('tiktok')!==-1||ua.indexOf('bytedance')!==-1){return 'tiktok';}return raw?'other':'direct';}function visitorId(){var key='chaput_lp_vid';try{var existing=window.localStorage.getItem(key);if(existing){return existing;}var created='lp_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,12);window.localStorage.setItem(key,created);return created;}catch(_){return 'lp_'+Math.random().toString(36).slice(2,12);}}var source=detectSource();var vid=visitorId();var pagePath=window.location.pathname+window.location.search;var commonQuery='visitor_id='+encodeURIComponent(vid)+'&source='+encodeURIComponent(source)+'&path='+encodeURIComponent(pagePath)+'&referrer_host='+encodeURIComponent(referrerHost)+'&utm_source='+encodeURIComponent(utmSource||source);var beacon=new Image();beacon.referrerPolicy='no-referrer-when-downgrade';beacon.src=analyticsOrigin+'/public/landing/track.gif?'+commonQuery+'&_ts='+(Date.now());document.querySelectorAll('[data-store-target]').forEach(function(link){var target=(link.getAttribute('data-store-target')||'').toLowerCase();if(!target){return;}link.setAttribute('href',analyticsOrigin+'/public/landing/store?platform='+encodeURIComponent(target)+'&'+commonQuery);});})();</script>
-<script>(function(){var ua=navigator.userAgent||"";var isAndroid=/Android/i.test(ua);var isIOS=/iPad|iPhone|iPod/.test(ua)&&!window.MSStream;if(!isAndroid&&!isIOS){return;}var params=new URLSearchParams(window.location.search);var deeplinkParam=params.get("deeplink");var isDeepPath=/^\/(me|u|c|post|profile)\//.test(window.location.pathname);if(!deeplinkParam&&!isDeepPath){return;}var path=deeplinkParam||window.location.pathname+window.location.search+window.location.hash;var cleanPath=path.replace(/^\//,"");var androidPackage="com.goktigin.chaput";var androidStore="https://play.google.com/store/apps/details?id=com.goktigin.chaput";var iosStore="https://apps.apple.com/us/search?term=com.goktigin.chaput";if(isAndroid){var timeout=setTimeout(function(){if(!document.hidden){window.location.href=androidStore;}},1800);var clear=function(){clearTimeout(timeout);};window.addEventListener("pagehide",clear);var intentPath=cleanPath.replace(/^chaput\.app\//,"").replace(/^www\.chaput\.app\//,"");var hashIndex=intentPath.indexOf("#");if(hashIndex!==-1){intentPath=intentPath.slice(0,hashIndex);}var intent="intent://chaput.app/"+intentPath+"#Intent;scheme=https;package="+androidPackage+";S.browser_fallback_url="+encodeURIComponent(androidStore)+";end";document.querySelectorAll(".app__button-play").forEach(function(link){link.href=intent;link.removeAttribute("target");});try{window.location.replace(intent);}catch(_){window.location.href=androidStore;}return;}var deepLink="com.goktigin.chaput://chaput.app/"+cleanPath;var iosTimeout=setTimeout(function(){if(!document.hidden){window.location.href=iosStore;}},1800);window.addEventListener("pagehide",function(){clearTimeout(iosTimeout);});window.location.href=deepLink;})();</script>
+<div class="ios-install-sheet" id="ios-install-sheet" hidden aria-hidden="true">
+<div class="ios-install-sheet__panel" role="dialog" aria-modal="true" aria-labelledby="ios-install-sheet-title">
+<div class="ios-install-sheet__handle" aria-hidden="true"></div>
+<h2 class="ios-install-sheet__title darkmode-ignore" id="ios-install-sheet-title"></h2>
+<p class="ios-install-sheet__text" id="ios-install-sheet-text"></p>
+<div class="ios-install-sheet__actions">
+<a class="ios-install-sheet__button ios-install-sheet__button--primary" id="ios-install-sheet-open" href="https://apps.apple.com/us/app/chaput/id6777180189"></a>
+<button type="button" class="ios-install-sheet__button ios-install-sheet__button--secondary" id="ios-install-sheet-dismiss"></button>
+</div>
+</div>
+</div>
+<script>(function(){var host=(window.location.hostname||'').toLowerCase();var analyticsOrigin='';if(host==='chaput.app'||host==='www.chaput.app'){analyticsOrigin='https://api.chaput.app';}else if(host==='test.chaput.app'||host==='www.test.chaput.app'){analyticsOrigin='https://test-api.chaput.app';}var iosStoreUrl='https://apps.apple.com/us/app/chaput/id6777180189';var params=new URLSearchParams(window.location.search);var utmSource=(params.get('utm_source')||'').trim().toLowerCase();var explicitSource=(params.get('source')||utmSource).trim().toLowerCase();var referrerHost='';try{if(document.referrer){referrerHost=(new URL(document.referrer)).hostname.toLowerCase();if(referrerHost.indexOf('www.')===0){referrerHost=referrerHost.slice(4);}}}catch(_){referrerHost='';}var ua=(navigator.userAgent||'').toLowerCase();var isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent||'')&&!window.MSStream;function detectSource(){var raw=explicitSource||referrerHost;if(raw){if(raw.indexOf('youtube')!==-1||raw==='yt'){return 'youtube';}if(raw.indexOf('instagram')!==-1||raw==='ig'){return 'instagram';}if(raw.indexOf('tiktok')!==-1||raw==='tt'||raw.indexOf('bytedance')!==-1){return 'tiktok';}}if(ua.indexOf('youtube')!==-1){return 'youtube';}if(ua.indexOf('instagram')!==-1){return 'instagram';}if(ua.indexOf('tiktok')!==-1||ua.indexOf('bytedance')!==-1){return 'tiktok';}return raw?'other':'direct';}function visitorId(){var key='chaput_lp_vid';try{var existing=window.localStorage.getItem(key);if(existing){return existing;}var created='lp_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,12);window.localStorage.setItem(key,created);return created;}catch(_){return 'lp_'+Math.random().toString(36).slice(2,12);}}var source=detectSource();var vid=visitorId();var pagePath=window.location.pathname+window.location.search;var commonQuery='visitor_id='+encodeURIComponent(vid)+'&source='+encodeURIComponent(source)+'&path='+encodeURIComponent(pagePath)+'&referrer_host='+encodeURIComponent(referrerHost)+'&utm_source='+encodeURIComponent(utmSource||source);function fireStoreClick(target){if(!analyticsOrigin){return;}var beacon=new Image();beacon.referrerPolicy='no-referrer-when-downgrade';beacon.src=analyticsOrigin+'/public/landing/store?platform='+encodeURIComponent(target)+'&'+commonQuery+'&_ts='+(Date.now());}if(analyticsOrigin){var beacon=new Image();beacon.referrerPolicy='no-referrer-when-downgrade';beacon.src=analyticsOrigin+'/public/landing/track.gif?'+commonQuery+'&_ts='+(Date.now());}document.querySelectorAll('[data-store-target]').forEach(function(link){var target=(link.getAttribute('data-store-target')||'').toLowerCase();if(!target){return;}if(target==='ios'){link.setAttribute('href',iosStoreUrl);if(isIOS){link.removeAttribute('target');link.removeAttribute('rel');link.addEventListener('click',function(event){event.preventDefault();fireStoreClick('ios');window.setTimeout(function(){window.location.href=iosStoreUrl;},80);});return;}link.addEventListener('click',function(){fireStoreClick('ios');});return;}if(!analyticsOrigin){return;}link.setAttribute('href',analyticsOrigin+'/public/landing/store?platform='+encodeURIComponent(target)+'&'+commonQuery);});var isRootPath=window.location.pathname==='/'||window.location.pathname==='';if(!isIOS||!isRootPath){return;}try{if(window.sessionStorage&&window.sessionStorage.getItem('chaput_ios_store_prompt_dismissed')==='1'){return;}}catch(_){ }var lang=(navigator.language||navigator.userLanguage||'en').toLowerCase();var isTr=lang.indexOf('tr')===0;var copy=isTr?{title:'Chaput iPhone’da App Store’dan kuruluyor',text:'En sorunsuz kurulum için App Store sayfasından devam et.',open:'App Store’u aç',dismiss:'Şimdilik kapat'}:{title:'Chaput installs from the App Store on iPhone',text:'For the smoothest install flow, continue on the App Store page.',open:'Open App Store',dismiss:'Not now'};var sheet=document.getElementById('ios-install-sheet');var title=document.getElementById('ios-install-sheet-title');var text=document.getElementById('ios-install-sheet-text');var open=document.getElementById('ios-install-sheet-open');var dismiss=document.getElementById('ios-install-sheet-dismiss');if(!sheet||!title||!text||!open||!dismiss){return;}title.textContent=copy.title;text.textContent=copy.text;open.textContent=copy.open;open.href=iosStoreUrl;open.addEventListener('click',function(event){event.preventDefault();fireStoreClick('ios');window.location.href=iosStoreUrl;});dismiss.textContent=copy.dismiss;dismiss.addEventListener('click',function(){sheet.hidden=true;sheet.setAttribute('aria-hidden','true');try{if(window.sessionStorage){window.sessionStorage.setItem('chaput_ios_store_prompt_dismissed','1');}}catch(_){ }});window.requestAnimationFrame(function(){sheet.hidden=false;sheet.setAttribute('aria-hidden','false');});})();</script>
+<script>(function(){var ua=navigator.userAgent||"";var isAndroid=/Android/i.test(ua);var isIOS=/iPad|iPhone|iPod/.test(ua)&&!window.MSStream;if(!isAndroid&&!isIOS){return;}var params=new URLSearchParams(window.location.search);var deeplinkParam=params.get("deeplink");var isDeepPath=/^\/(me|u|c|post|profile)\//.test(window.location.pathname);if(!deeplinkParam&&!isDeepPath){return;}var path=deeplinkParam||window.location.pathname+window.location.search+window.location.hash;var cleanPath=path.replace(/^\//,"");var androidPackage="com.goktigin.chaput";var androidStore="https://play.google.com/store/apps/details?id=com.goktigin.chaput";var iosStore="https://apps.apple.com/us/app/chaput/id6777180189";if(isAndroid){var timeout=setTimeout(function(){if(!document.hidden){window.location.href=androidStore;}},1800);var clear=function(){clearTimeout(timeout);};window.addEventListener("pagehide",clear);var intentPath=cleanPath.replace(/^chaput\.app\//,"").replace(/^www\.chaput\.app\//,"");var hashIndex=intentPath.indexOf("#");if(hashIndex!==-1){intentPath=intentPath.slice(0,hashIndex);}var intent="intent://chaput.app/"+intentPath+"#Intent;scheme=https;package="+androidPackage+";S.browser_fallback_url="+encodeURIComponent(androidStore)+";end";document.querySelectorAll(".app__button-play").forEach(function(link){link.href=intent;link.removeAttribute("target");});try{window.location.replace(intent);}catch(_){window.location.href=androidStore;}return;}var deepLink="com.goktigin.chaput://chaput.app/"+cleanPath;var iosTimeout=setTimeout(function(){if(!document.hidden){window.location.href=iosStore;}},1800);window.addEventListener("pagehide",function(){clearTimeout(iosTimeout);});window.location.href=deepLink;})();</script>
 </body>
 </html>

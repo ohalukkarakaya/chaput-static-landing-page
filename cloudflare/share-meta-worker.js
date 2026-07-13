@@ -5,7 +5,7 @@ const DEFAULT_IMAGE = `${SITE_ORIGIN}/assets/images/large-logo.png`;
 const ANDROID_STORE =
   'https://play.google.com/store/apps/details?id=com.goktigin.chaput';
 
-const IOS_STORE = 'https://apps.apple.com/us/search?term=app.chaput';
+const IOS_STORE = 'https://apps.apple.com/us/app/chaput/id6777180189';
 
 function escapeHtml(value) {
   return String(value ?? '')
