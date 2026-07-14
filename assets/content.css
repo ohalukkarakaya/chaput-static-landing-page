@@ -111,9 +111,9 @@ h3{font-size:23px;font-weight:700}
 .download-band{margin:44px 0;padding:clamp(26px,5vw,50px);border-radius:var(--radius);background:#0f1118;color:#fff;box-shadow:var(--shadow)}
 .download-band h2{margin-bottom:10px}
 .download-band p{max-width:720px;color:#d9ddec}
-.store-buttons{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:22px}
-.store-button{display:inline-flex;align-items:center;justify-content:center;height:52px;line-height:0;text-decoration:none}
-.store-button img{width:auto;height:52px;object-fit:contain}
+.store-buttons{display:flex;align-items:center;gap:14px;flex-wrap:nowrap;margin-top:22px}
+.store-button{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:180px;aspect-ratio:3/1;padding:0;overflow:hidden;border:0;border-radius:8px;outline:0;background:#000;box-shadow:none;line-height:0;text-decoration:none}
+.store-button img{display:block;width:100%;height:100%;max-width:none;flex:none;object-fit:cover}
 .site-footer{padding:30px 0 42px;color:var(--muted);font-size:14px}
 .site-footer__inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
 .site-footer__links{display:flex;gap:16px;flex-wrap:wrap}
@@ -159,7 +159,7 @@ body.theme-dark .download-band{border:1px solid var(--line);background:#050608}
   .card-grid,.content-aside,.related-links{grid-template-columns:1fr}
   .hero-actions .button{width:100%}
   .store-buttons{gap:10px}
-  .store-button,.store-button img{height:44px}
+  .store-button{width:min(145px,calc((100% - 10px)/2))}
   .site-footer__inner{align-items:flex-start;flex-direction:column}
 }
 
