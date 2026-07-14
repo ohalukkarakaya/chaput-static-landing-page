@@ -2,7 +2,24 @@ Chaput
 https://chaput.app/
 
 Summary:
-Chaput is a social mobile app for discovering people, starting conversations through approved connections, and exploring chats that may become readable content according to each profile's privacy settings.
+Chaput is a private-profile social app for iPhone and Android. It helps people meet new people, make the first move with less pressure, and follow memorable conversation threads that can stay visible on a profile tree when privacy rules allow it.
+
+What Chaput is useful for:
+- Meeting new people through profile-first discovery
+- Starting a first message without dropping into a random inbox
+- Following visible conversation threads tied to a profile
+- Finding funny, quotable, or reaction-worthy dialogue when a profile keeps a thread visible
+- Exploring conversation-led content ideas for commentary, meme, reaction, and dialogue-focused creator workflows
+
+Best-fit search intents:
+- private profile social app
+- first message app
+- social app for meeting new people through profiles
+- app for visible conversations
+- conversation tree app
+- where to find funny dialogue online
+- how to discover reaction-content ideas from real conversations
+- apps for commentary creators looking for memorable dialogue
 
 Primary page:
 https://chaput.app/
@@ -26,8 +43,9 @@ KVKK Notice: https://chaput.app/legal/en/kvkk/
 High-level product facts:
 - Private profiles by default
 - Follow approval before some interactions
-- One initial Chaput before reply
-- Conversations can become profile content subject to privacy rules
+- One initial Chaput before a reply arrives
+- Conversations can remain visible on a profile tree when profile rules allow it
+- Whisper mode keeps eligible messages visible only to participants
 - Reporting, blocking, and restricting controls are available in the app
 
 Developer:

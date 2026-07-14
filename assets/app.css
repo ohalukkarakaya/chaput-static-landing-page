@@ -106,3 +106,56 @@ body.darkmode--activated .app__feature-title,
 body.darkmode--activated .app__faq-question,
 body.darkmode--activated .app__section-eyebrow{color:#eef0ff}
 @media (max-width:768px){.app__anchor-nav{margin:0 auto 48px;padding:0 30px 4px;overflow-x:auto;overflow-y:hidden;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}.app__anchor-nav::-webkit-scrollbar{display:none}.app__anchor-link{flex:0 0 auto}.app__faq-question{font-size:16px}.app__download-actions{gap:8px}}
+
+.app__buttons,
+.app__download-actions{align-items:center}
+.app__buttons{gap:14px;margin-left:0;flex-wrap:wrap}
+.app__button-play,
+.app__button-ios,
+.app__button-web{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;line-height:0}
+.app__button-play img,
+.app__button-ios img,
+.app__button-web img{display:block;height:auto!important;max-width:100%;object-fit:contain;vertical-align:middle}
+.app__button-play img{width:176.4px!important}
+.app__button-ios img{width:140px!important}
+.app__button-web img{width:157px!important}
+.app__download-actions{gap:14px}
+.app__download-note,
+.app__feature-text,
+.app__faq-answer,
+.app__info-value,
+.app__section-lead,
+.footer__love,
+.footer__links a{color:#3f4357}
+.app__feature-title,
+.app__faq-question,
+.app__info-label,
+.app__section-title,
+.app__description,
+.app__name{color:#171923}
+body.darkmode--activated .app__info-card,
+body.darkmode--activated .app__feature-card,
+body.darkmode--activated .app__faq-item{background:rgba(15,18,28,.94);border-color:rgba(255,255,255,.08);box-shadow:0 22px 44px rgba(0,0,0,.36)}
+body.darkmode--activated .app__section-lead,
+body.darkmode--activated .app__info-value,
+body.darkmode--activated .app__feature-text,
+body.darkmode--activated .app__faq-answer,
+body.darkmode--activated .app__download-note,
+body.darkmode--activated .footer__love,
+body.darkmode--activated .footer__links a{color:#d7dced!important}
+body.darkmode--activated .app__feature-title,
+body.darkmode--activated .app__faq-question,
+body.darkmode--activated .app__section-title,
+body.darkmode--activated .app__info-label,
+body.darkmode--activated .app__section-eyebrow,
+body.darkmode--activated .app__description,
+body.darkmode--activated .app__name{color:#f5f7ff!important}
+body.darkmode--activated .app__info-badge{background:rgba(90,81,254,.2);color:#dce1ff}
+body.darkmode--activated .app__pill{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:#eef1fb}
+@media (max-width:768px){
+  .app__buttons{gap:10px}
+  .app__button-play img{width:126px!important}
+  .app__button-ios img{width:100px!important}
+  .app__button-web img{width:112px!important}
+  .app__download-actions{gap:10px}
+}
