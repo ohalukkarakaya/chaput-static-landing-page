@@ -1,0 +1,34 @@
+Chaput
+https://chaput.app/
+
+Summary:
+Chaput is a social mobile app for discovering people, starting conversations through approved connections, and exploring chats that may become readable content according to each profile's privacy settings.
+
+Primary page:
+https://chaput.app/
+
+Official app listings:
+iOS: https://apps.apple.com/us/app/chaput/id6777180189
+Android: https://play.google.com/store/apps/details?id=com.goktigin.chaput
+
+Support:
+Email: hello@goktigin.com
+Legal center: https://chaput.app/legal/
+
+Important legal pages:
+Privacy Policy: https://chaput.app/legal/en/privacy/
+Terms of Use: https://chaput.app/legal/en/terms/
+Children's Privacy Notice: https://chaput.app/legal/en/children/
+Community Guidelines: https://chaput.app/legal/en/community/
+Content Moderation Policy: https://chaput.app/legal/en/moderation/
+KVKK Notice: https://chaput.app/legal/en/kvkk/
+
+High-level product facts:
+- Private profiles by default
+- Follow approval before some interactions
+- One initial Chaput before reply
+- Conversations can become profile content subject to privacy rules
+- Reporting, blocking, and restricting controls are available in the app
+
+Developer:
+GOKTIGIN BILISIM TEKNOLOJI LIMITED SIRKETI
