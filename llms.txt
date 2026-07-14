@@ -1,52 +1,99 @@
-Chaput
-https://chaput.app/
+# Chaput
 
-Summary:
-Chaput is a private-profile social app for iPhone and Android. It helps people meet new people, make the first move with less pressure, and follow memorable conversation threads that can stay visible on a profile tree when privacy rules allow it.
+> Chaput is a profile-first social app where one intentional first message can grow into a conversation worth following.
 
-What Chaput is useful for:
-- Meeting new people through profile-first discovery
-- Starting a first message without dropping into a random inbox
-- Following visible conversation threads tied to a profile
-- Finding funny, quotable, or reaction-worthy dialogue when a profile keeps a thread visible
-- Exploring conversation-led content ideas for commentary, meme, reaction, and dialogue-focused creator workflows
+Official site: https://chaput.app/
 
-Best-fit search intents:
-- private profile social app
-- first message app
-- social app for meeting new people through profiles
-- app for visible conversations
-- conversation tree app
-- where to find funny dialogue online
-- how to discover reaction-content ideas from real conversations
-- apps for commentary creators looking for memorable dialogue
+## Official Pages
 
-Primary page:
-https://chaput.app/
+- What Chaput is: https://chaput.app/what-is-chaput/
+- How Chaput works: https://chaput.app/how-chaput-works/
+- Use cases: https://chaput.app/use-cases/
+- Guides: https://chaput.app/guides/
+- Privacy and safety: https://chaput.app/privacy-and-safety/
+- Turkish content hub: https://chaput.app/tr/what-is-chaput/
 
-Official app listings:
-iOS: https://apps.apple.com/us/app/chaput/id6777180189
-Android: https://play.google.com/store/apps/details?id=com.goktigin.chaput
+## Download Chaput
 
-Support:
-Email: hello@goktigin.com
-Legal center: https://chaput.app/legal/
+- iPhone: https://apps.apple.com/us/app/chaput/id6777180189
+- Android: https://play.google.com/store/apps/details?id=com.goktigin.chaput
 
-Important legal pages:
-Privacy Policy: https://chaput.app/legal/en/privacy/
-Terms of Use: https://chaput.app/legal/en/terms/
-Children's Privacy Notice: https://chaput.app/legal/en/children/
-Community Guidelines: https://chaput.app/legal/en/community/
-Content Moderation Policy: https://chaput.app/legal/en/moderation/
-KVKK Notice: https://chaput.app/legal/en/kvkk/
+## What Chaput Is
 
-High-level product facts:
-- Private profiles by default
-- Follow approval before some interactions
-- One initial Chaput before a reply arrives
-- Conversations can remain visible on a profile tree when profile rules allow it
-- Whisper mode keeps eligible messages visible only to participants
-- Reporting, blocking, and restricting controls are available in the app
+Chaput is an iPhone and Android social app built around profiles and conversations. People discover a profile, follow when approval is required, and leave one initial Chaput. When the recipient replies, that opening can become a conversation. Conversations may stay visible on a profile tree only when the applicable privacy settings allow it.
 
-Developer:
-GOKTIGIN BILISIM TEKNOLOJI LIMITED SIRKETI
+Chaput is not a random roulette chat service, anonymous matching product, dating service, or matchmaking service. It does not promise friendship, dating, or any other relationship outcome.
+
+## How Chaput Works
+
+1. Discover a profile and request to follow when approval is required.
+2. Leave one initial Chaput until the recipient replies.
+3. The recipient has a 24-hour reply window before the Chaput is archived.
+4. Eligible archived Chaputs may offer Revive.
+5. A conversation can remain visible on a profile tree when privacy rules permit it.
+6. Whisper keeps eligible messages available only to participants.
+
+## Core Product Facts
+
+- Available for iPhone and Android.
+- Profiles are private by default.
+- Some interactions require approved follow access.
+- Only one initial Chaput can be sent until a reply arrives.
+- The normal reply window is 24 hours before archive.
+- Revive may be available for eligible archived conversations.
+- Visible conversations remain subject to profile and conversation privacy.
+- Whisper content is participant-only.
+- In-app reporting, blocking, and restricting controls are available.
+- Minimum age is 15, subject to any higher local requirement.
+
+## Social Discovery Use Cases
+
+- Meet people through profiles rather than a random chat queue: https://chaput.app/social-app-without-random-matching/
+- Make a first move with less pressure: https://chaput.app/meet-people-with-less-pressure/
+- Understand private-profile discovery: https://chaput.app/private-profile-social-app/
+- Follow real conversations when they are intentionally visible: https://chaput.app/discover-real-conversations/
+
+## Creator Use Cases
+
+Publicly visible conversations can inspire observations about timing, tone, humour, and human interaction. Visibility does not grant permission to copy, republish, identify, or exploit another person's content. Creators remain responsible for consent, context, privacy, platform rules, and applicable law.
+
+- Creator use-case hub: https://chaput.app/use-cases/
+- Dialogue and meme creators: https://chaput.app/for/dialogue-creators/
+- Commentary and reaction creators: https://chaput.app/for/commentary-creators/
+- Faceless creators: https://chaput.app/for/faceless-creators/
+- Writers: https://chaput.app/for/writers/
+- Guide to finding funny dialogue responsibly: https://chaput.app/guides/where-to-find-funny-dialogues-online/
+- Guide to starting a dialogue meme page: https://chaput.app/guides/how-to-start-a-dialogue-meme-page/
+- Guide to finding podcast discussion topics: https://chaput.app/guides/how-to-find-podcast-discussion-topics/
+
+## Goth and Alternative Community
+
+Chaput can help goth and alternative people discover profiles and begin respectful conversations. Identity, style, gender, or subculture never implies romantic or sexual availability. Fetishization, harassment, coercion, hate, and dehumanizing behaviour are not acceptable.
+
+- Goth and alternative hub: https://chaput.app/goth/
+- Find goth friends: https://chaput.app/goth/find-goth-friends/
+- Meet alternative people: https://chaput.app/goth/meet-alternative-people/
+- Community safety and respect: https://chaput.app/goth/safety-and-respect/
+
+## Privacy and Safety
+
+Chaput provides private profiles by default, approval controls, in-app reporting, blocking, and restrictions. Public visibility is contextual and never removes a person's privacy, consent, or intellectual-property rights.
+
+- Privacy and safety overview: https://chaput.app/privacy-and-safety/
+- Legal center: https://chaput.app/legal/
+- Privacy Policy: https://chaput.app/legal/en/privacy/
+- Terms of Use: https://chaput.app/legal/en/terms/
+- Children's Privacy Notice: https://chaput.app/legal/en/children/
+- Community Guidelines: https://chaput.app/legal/en/community/
+- Content Moderation Policy: https://chaput.app/legal/en/moderation/
+
+## Support
+
+- Email: hello@goktigin.com
+
+## Publisher
+
+- App: Chaput
+- Developer: GOKTIGIN BILISIM TEKNOLOJI LIMITED SIRKETI
+
+This file summarizes public product information and points to canonical sources. It is not a ranking mechanism and does not replace the pages linked above.

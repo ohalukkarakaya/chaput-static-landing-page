@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
+Disallow: /me/
+Disallow: /u/
+Disallow: /c/
+Disallow: /post/
+Disallow: /profile/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /account/
 
 Sitemap: https://chaput.app/sitemap.xml

@@ -1,1 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><link href="https://chaput.app/feed.xml" rel="self" type="application/atom+xml"/><link href="https://chaput.app/" rel="alternate" type="text/html"/><updated>2026-07-14T00:00:00+02:00</updated><id>https://chaput.app/feed.xml</id><title type="html">Chaput</title><subtitle>Chaput is a private-profile social app for meeting new people, making the first move naturally, and following conversation threads that can stay visible when profile rules allow it.</subtitle><author><name>Chaput</name></author></feed>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <link href="https://chaput.app/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://chaput.app/" rel="alternate" type="text/html"/>
+  <updated>2026-07-14T00:00:00+02:00</updated>
+  <id>https://chaput.app/feed.xml</id>
+  <title>Chaput</title>
+  <subtitle>Official product guides for Chaput, a profile-first social app where conversations can become content when privacy settings allow.</subtitle>
+  <author><name>Chaput</name></author>
+  <entry>
+    <title>What is Chaput?</title>
+    <link href="https://chaput.app/what-is-chaput/"/>
+    <id>https://chaput.app/what-is-chaput/</id>
+    <updated>2026-07-14T00:00:00+02:00</updated>
+    <summary>Learn how Chaput turns one intentional first message into a conversation that can grow on a profile tree.</summary>
+  </entry>
+  <entry>
+    <title>How Chaput works</title>
+    <link href="https://chaput.app/how-chaput-works/"/>
+    <id>https://chaput.app/how-chaput-works/</id>
+    <updated>2026-07-14T00:00:00+02:00</updated>
+    <summary>Follow the Chaput flow from profile discovery and an opening message to replies, archives, Revive and privacy controls.</summary>
+  </entry>
+  <entry>
+    <title>Conversation-led ideas for creators</title>
+    <link href="https://chaput.app/use-cases/"/>
+    <id>https://chaput.app/use-cases/</id>
+    <updated>2026-07-14T00:00:00+02:00</updated>
+    <summary>Explore responsible ways for dialogue, commentary, reaction and writing creators to learn from conversation patterns.</summary>
+  </entry>
+  <entry>
+    <title>Goth and alternative community on Chaput</title>
+    <link href="https://chaput.app/goth/"/>
+    <id>https://chaput.app/goth/</id>
+    <updated>2026-07-14T00:00:00+02:00</updated>
+    <summary>Discover profile-first connections for goth and alternative people with clear expectations around respect, privacy and safety.</summary>
+  </entry>
+</feed>

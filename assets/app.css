@@ -116,9 +116,8 @@ body.darkmode--activated .app__section-eyebrow{color:#eef0ff}
 .app__button-play img,
 .app__button-ios img,
 .app__button-web img{display:block;height:auto!important;max-width:100%;object-fit:contain;vertical-align:middle}
-.app__button-play img{width:176.4px!important}
-.app__button-ios img{width:140px!important}
-.app__button-web img{width:157px!important}
+.app__button-play img,.app__button-ios img{width:auto!important;height:52px!important}
+.app__button-web img{width:auto!important;height:52px!important}
 .app__download-actions{gap:14px}
 .app__download-note,
 .app__feature-text,
@@ -154,8 +153,15 @@ body.darkmode--activated .app__info-badge{background:rgba(90,81,254,.2);color:#d
 body.darkmode--activated .app__pill{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:#eef1fb}
 @media (max-width:768px){
   .app__buttons{gap:10px}
-  .app__button-play img{width:126px!important}
-  .app__button-ios img{width:100px!important}
-  .app__button-web img{width:112px!important}
+  .app__button-play img,.app__button-ios img,.app__button-web img{width:auto!important;height:44px!important}
   .app__download-actions{gap:10px}
 }
+
+/* Five real screenshots: fixed frames prevent artwork distortion while the
+   existing mobile container remains horizontally scrollable. */
+.app__screenshots-list{grid-template-columns:repeat(5,200px);width:max-content}
+.app__feature-card{display:flex;flex-direction:column}
+.app__feature-link{display:inline-flex;align-items:center;width:fit-content;margin-top:auto;padding-top:18px;color:#14151a;font-family:Qanelas,Arial,sans-serif;font-weight:700;text-decoration-thickness:1.5px;text-underline-offset:4px}
+.app__feature-link:hover,.app__feature-link:focus-visible{color:#4858ff}
+body.darkmode--activated .app__feature-link{color:#fff}
+body.darkmode--activated .app__feature-link:hover,body.darkmode--activated .app__feature-link:focus-visible{color:#b7c0ff}
