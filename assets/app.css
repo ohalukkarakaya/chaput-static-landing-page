@@ -82,3 +82,27 @@ body.page--privacy.darkmode--activated .footer a {
 .footer__links {
   flex-wrap: wrap;
 }
+
+.app__anchor-nav{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:0 auto 96px}
+.app__anchor-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.92);border:1px solid rgba(17,16,62,.08);box-shadow:0 10px 30px rgba(17,16,62,.08);color:#1f2230;font-size:var(--font-xs);font-weight:600;line-height:1.2;white-space:nowrap;transition:transform .18s ease,box-shadow .18s ease,color .18s ease}
+.app__anchor-link:hover{color:#5a51fe;box-shadow:0 16px 34px rgba(17,16,62,.12);transform:translateY(-1px)}
+.app__section-eyebrow{margin:0;color:#5a51fe;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase}
+.app__faq-list{display:grid;gap:14px}
+.app__faq-item{background:rgba(255,255,255,.92);border:1px solid rgba(17,16,62,.08);border-radius:18px;box-shadow:0 10px 30px rgba(17,16,62,.08);padding:0 18px;overflow:hidden}
+.app__faq-question{cursor:pointer;list-style:none;padding:18px 0;font-size:var(--font-sm);font-weight:700;line-height:1.4;color:#1f2230}
+.app__faq-question::-webkit-details-marker{display:none}
+.app__faq-item[open] .app__faq-question{padding-bottom:10px}
+.app__faq-answer{margin:0 0 18px;color:#4b4b60;font-size:var(--font-xs);line-height:1.6}
+.app__download-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:8px}
+.app__download-note{margin:18px 0 0;color:#4b4b60;font-size:var(--font-xs);line-height:1.6}
+body.darkmode--activated .app__anchor-link{background:rgba(16,19,28,.9);border-color:rgba(255,255,255,.08);box-shadow:0 18px 36px rgba(0,0,0,.32);color:#eef0ff}
+body.darkmode--activated .app__anchor-link:hover{color:#cfd3ff}
+body.darkmode--activated .app__feature-card,
+body.darkmode--activated .app__faq-item{background:rgba(16,19,28,.9);border-color:rgba(255,255,255,.08);box-shadow:0 18px 36px rgba(0,0,0,.32)}
+body.darkmode--activated .app__feature-text,
+body.darkmode--activated .app__faq-answer,
+body.darkmode--activated .app__download-note{color:#b9bfd3}
+body.darkmode--activated .app__feature-title,
+body.darkmode--activated .app__faq-question,
+body.darkmode--activated .app__section-eyebrow{color:#eef0ff}
+@media (max-width:768px){.app__anchor-nav{margin:0 auto 48px;padding:0 30px 4px;overflow-x:auto;overflow-y:hidden;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}.app__anchor-nav::-webkit-scrollbar{display:none}.app__anchor-link{flex:0 0 auto}.app__faq-question{font-size:16px}.app__download-actions{gap:8px}}
