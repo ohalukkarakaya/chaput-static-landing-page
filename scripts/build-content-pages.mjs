@@ -1,5 +1,6 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
+import { contentPageCopy } from './content-page-copy.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const site = 'https://chaput.app';
@@ -11,8 +12,8 @@ const ui = {
   en: {
     home: 'Home', navProduct: 'Product', navGuides: 'Guides', navCreators: 'For creators', navCommunity: 'Community',
     skip: 'Skip to content', download: 'Download Chaput', learn: 'Learn how it works', contents: 'On this page',
-    related: 'Keep exploring', storeTitle: 'Start one conversation worth remembering.',
-    storeText: 'Discover profiles, connect at your pace and leave one intentional first Chaput.',
+    related: 'Keep exploring', storeTitle: 'Start a conversation worth remembering.',
+    storeText: 'Discover people through their profiles, connect at your own pace and start with one thoughtful Chaput.',
     privacy: 'Privacy', terms: 'Terms', community: 'Community rules', legal: 'Legal',
     language: 'Türkçe', dark: 'Use dark theme', light: 'Use light theme',
     appStore: 'Download Chaput on the App Store', playStore: 'Get Chaput on Google Play',
@@ -23,7 +24,7 @@ const ui = {
     home: 'Ana sayfa', navProduct: 'Ürün', navGuides: 'Rehberler', navCreators: 'Üreticiler için', navCommunity: 'Topluluk',
     skip: 'İçeriğe geç', download: 'Chaput’u indir', learn: 'Nasıl çalıştığını gör', contents: 'Bu sayfada',
     related: 'Keşfetmeye devam et', storeTitle: 'Hatırlamaya değer bir sohbet başlat.',
-    storeText: 'Profilleri keşfet, kendi hızında bağlantı kur ve tek, niyetli bir ilk Chaput bırak.',
+    storeText: 'İnsanları profilleri üzerinden keşfet, kendi hızında bağlantı kur ve düşünülmüş tek bir Chaput ile ilk adımı at.',
     privacy: 'Gizlilik', terms: 'Kullanıcı sözleşmesi', community: 'Topluluk kuralları', legal: 'Yasal',
     language: 'English', dark: 'Koyu temayı kullan', light: 'Açık temayı kullan',
     appStore: 'Chaput’u App Store’dan indir', playStore: 'Chaput’u Google Play’den indir',
@@ -32,7 +33,7 @@ const ui = {
   },
 };
 
-const pages = [
+const basePages = [
   {
     slug: 'what-is-chaput', kind: 'product', image: 1,
     en: {
@@ -287,6 +288,14 @@ const pages = [
     },
   },
 ];
+
+const pages = basePages.map((page) => {
+  const copy = contentPageCopy[page.slug];
+  if (!copy) {
+    throw new Error(`Missing editorial copy for content page: ${page.slug}`);
+  }
+  return { ...page, ...copy };
+});
 
 const bySlug = new Map(pages.map((p) => [p.slug, p]));
 const relatedMap = {
