@@ -2,6 +2,43 @@
   'use strict';
 
   var body = document.body;
+  var languageSwitch = document.querySelector('.language-switch');
+  var currentLanguage = body.dataset.pageLanguage === 'tr' ? 'tr' : 'en';
+  var storedLanguage = '';
+
+  try {
+    storedLanguage = window.localStorage.getItem('chaput_site_language') || '';
+  } catch (_) {}
+
+  if (languageSwitch) {
+    languageSwitch.addEventListener('click', function () {
+      var selectedLanguage = languageSwitch.getAttribute('hreflang');
+      if (selectedLanguage !== 'tr' && selectedLanguage !== 'en') return;
+
+      try {
+        window.localStorage.setItem('chaput_site_language', selectedLanguage);
+      } catch (_) {}
+    });
+  }
+
+  var isCrawler = /bot|crawler|spider|slurp|bingpreview|facebookexternalhit/i.test(
+    navigator.userAgent || '',
+  );
+  var browserLanguage = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  var preferredLanguage = storedLanguage === 'tr' || storedLanguage === 'en'
+    ? storedLanguage
+    : (browserLanguage.indexOf('tr') === 0 ? 'tr' : 'en');
+
+  if (!isCrawler && preferredLanguage !== currentLanguage) {
+    var pathname = window.location.pathname || '/';
+    var localizedPath = preferredLanguage === 'tr'
+      ? (pathname.indexOf('/tr/') === 0 ? pathname : '/tr' + pathname)
+      : (pathname.replace(/^\/tr(?=\/|$)/, '') || '/');
+
+    window.location.replace(localizedPath + window.location.search + window.location.hash);
+    return;
+  }
+
   var themeButton = document.querySelector('[data-theme-toggle]');
   var storedTheme = '';
   try {
